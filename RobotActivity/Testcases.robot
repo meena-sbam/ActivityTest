@@ -23,7 +23,16 @@ Verify Response has Pagination
         #Verifying pagination by performing get request with page details in query parameters
         ${response_with_page}=    Get Request         /public/v2/users?page=1&per_page=10        200
 
+Verify Response has Valid Json Data
+        ${response}=    Get Request         /public/v2/users        200      ${headers}
+        #verify header content type is json
+        should contain      ${response.headers["Content-Type"]}          application/json
 
+
+Verify Response Data has email
+        ${response}=    Get Request         /public/v2/users        200      ${headers}
+        #Verify email attribute available in response json
+        Should Have Value In Json       ${response.json()}      $..email
 
 
 
