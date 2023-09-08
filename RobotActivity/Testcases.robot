@@ -10,8 +10,7 @@ Test Teardown      Delete All Sessions
 
 *** Variables ***
 ${users_endpoint}=     /public/v2/users
-#${AUTH_BEARER}=     Create Dictionary
-${AUTH_BEARER}=     Get Token
+${AUTH_BEARER}=     Get Input       Token
 ${headers}=     Create Dictionary       Content-Type=application/json Authorization=Bearer${AUTH_BEARER}
 
 *** Test Cases ***
@@ -36,8 +35,6 @@ Verify Response has Valid Json Data
         ${data}=    Evaluate    json.loads(json.dumps(${response.content}))
         ${type} =    Evaluate    type(${data[0]}).__name__
         Should be Equal     ${type}     dict
-
-
 
 Verify Response Data has email
         [Documentation]     Validate API response has 'email' attribute
@@ -75,6 +72,26 @@ Verify entries have similar attributes
                         List Should Contain Value         ${list_userdata}          ${i}
                 END
         END
+
+Verify HTTP response code-404
+        [Documentation]     validate 404 HTTP response code on performing GET with invalid Id
+        [Tags]      NonFunctional
+        ${response}=    Get Request         ${users_endpoint} /invalid_id       404      ${headers}
+
+Verify Get without Authentication
+        [Documentation]     Perform Get without providing the Bearer token in the header and validate the response
+        [Tags]      NonFunctional
+        ${response}=    Get Request         ${users_endpoint}        200
+
+Verify Post without Authentication
+        [Documentation]     Perform Get without providing the Bearer token in the header and validate the response
+        [Tags]      NonFunctional
+        &{data}=        Create Dictionary       name="test"     email="test@gmail.com"      gender="male"
+        ${response}=        POST Request        ${users_endpoint}       ${data}     401
+        ${response_str}=        Convert to String       ${response.content}
+        Should be equal      ${response_str}     {"message":"Authentication failed"}
+
+
 
 
 
