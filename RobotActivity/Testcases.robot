@@ -10,8 +10,11 @@ Test Teardown      Delete All Sessions
 
 *** Variables ***
 ${users_endpoint}=     /public/v2/users
-${AUTH_BEARER}=     Get Input       Token
-${headers}=     Create Dictionary       Content-Type=application/json Authorization=Bearer${AUTH_BEARER}
+${VALID_AUTH_BEARER}=     Get Input       validToken
+${INVALID_AUTH_BEARER}=     Get Input       invalidToken
+${users_endpoint_validtoken}=        /public/v2/users?access-token=${VALID_AUTH_BEARER}
+${users_endpoint_invalidtoken}=        /public/v2/users?access-token=${INVALID_AUTH_BEARER}
+${headers}=     Create Dictionary       Content-Type=application/json
 ${success_statuscode}=  200
 ${notfound_statuscode}=     404
 ${authenticationerror_statuscode}=      401
@@ -21,7 +24,7 @@ ${authenticationerror_statuscode}=      401
 Verify Response has Pagination
         [Documentation]     Validate the API response has pagination
         [Tags]      Functional
-        ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}      ${headers}
+        ${response}=    Get Request         ${users_endpoint}      ${success_statuscode}      ${headers}
         #Verifying pagination with header availability of 'x-pagination-page'
         should contain      ${response.headers}     x-pagination-page
         #Verifying pagination by performing get request with page details in query parameters
@@ -82,7 +85,7 @@ Verify HTTP response code when record doesn't exist
         ${response}=    Get Request         ${users_endpoint} /invalid_id       ${notfound_statuscode}      ${headers}
 
 Verify Get without Authentication
-        [Documentation]     Perform Get without providing the Bearer token in the header and validate the response
+        [Documentation]     Perform Get without providing the Bearer token in the query parameter and validate the response
         [Tags]      NonFunctional
         ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}
 
@@ -94,6 +97,23 @@ Verify Post without Authentication
         ${response_str}=        Convert to String       ${response.content}
         #validation error message from response
         Should be equal      ${response_str}     {"message":"Authentication failed"}
+
+
+Verify Post with invalid token
+        [Documentation]     Perform Get without Bearer token in the query parameter and validate the response
+        [Tags]      NonFunctional
+        &{data}=        Create Dictionary       name="test"     email="test@gmail.com"      gender="male"
+        ${response}=        POST Request        ${users_endpoint_invalidtoken}       ${data}     ${authenticationerror_statuscode}
+        ${response_str}=        Convert to String       ${response.content}
+        #validation error message from response
+        Should be equal      ${response_str}     {"message":"Invalid token"}
+
+Verify Post with Authentication
+        [Documentation]     Perform Get without Bearer token in the query parameter and validate the response
+        [Tags]      NonFunctional
+        &{data}=        Create Dictionary       name="test"     email="test@gmail.com"      gender="male"
+        ${response}=        POST Request        ${users_endpoint_validtoken}       ${data}     ${authenticationerror_statuscode}
+
 
 
 
