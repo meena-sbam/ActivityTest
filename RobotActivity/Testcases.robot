@@ -12,13 +12,16 @@ Test Teardown      Delete All Sessions
 ${users_endpoint}=     /public/v2/users
 ${AUTH_BEARER}=     Get Input       Token
 ${headers}=     Create Dictionary       Content-Type=application/json Authorization=Bearer${AUTH_BEARER}
+${success_statuscode}=  200
+${notfound_statuscode}=     404
+${authenticationerror_statuscode}=      401
 
 *** Test Cases ***
 
 Verify Response has Pagination
         [Documentation]     Validate the API response has pagination
         [Tags]      Functional
-        ${response}=    Get Request         ${users_endpoint}        200      ${headers}
+        ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}      ${headers}
         #Verifying pagination with header availability of 'x-pagination-page'
         should contain      ${response.headers}     x-pagination-page
         #Verifying pagination by performing get request with page details in query parameters
@@ -27,7 +30,7 @@ Verify Response has Pagination
 Verify Response has Valid Json Data
         [Documentation]         Validate the response has valid Json data
         [Tags]      Functional
-        ${response}=    Get Request         ${users_endpoint}        200      ${headers}
+        ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}       ${headers}
         #verify header content type is json
         should contain      ${response.headers["Content-Type"]}          application/json
 
@@ -39,14 +42,14 @@ Verify Response has Valid Json Data
 Verify Response Data has email
         [Documentation]     Validate API response has 'email' attribute
         [Tags]      Functional
-        ${response}=    Get Request         ${users_endpoint}        200      ${headers}
+        ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}       ${headers}
         #Verify email attribute available in response json
         Should Have Value In Json       ${response.json()}      $..email
 
 Verify entries have similar attributes
         [Documentation]     Validate all the entries in the API response has similar attributes
         [Tags]      Functional
-        ${response}=    Get Request         ${users_endpoint}        200      ${headers}
+        ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}       ${headers}
         #Getting the response json
         ${data}=        Set Variable        ${response.json()}
         # Getting the length of the response json to verify against each entries of a list
@@ -73,22 +76,23 @@ Verify entries have similar attributes
                 END
         END
 
-Verify HTTP response code-404
+Verify HTTP response code when record doesn't exist
         [Documentation]     validate 404 HTTP response code on performing GET with invalid Id
         [Tags]      NonFunctional
-        ${response}=    Get Request         ${users_endpoint} /invalid_id       404      ${headers}
+        ${response}=    Get Request         ${users_endpoint} /invalid_id       ${notfound_statuscode}      ${headers}
 
 Verify Get without Authentication
         [Documentation]     Perform Get without providing the Bearer token in the header and validate the response
         [Tags]      NonFunctional
-        ${response}=    Get Request         ${users_endpoint}        200
+        ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}
 
 Verify Post without Authentication
         [Documentation]     Perform Get without providing the Bearer token in the header and validate the response
         [Tags]      NonFunctional
         &{data}=        Create Dictionary       name="test"     email="test@gmail.com"      gender="male"
-        ${response}=        POST Request        ${users_endpoint}       ${data}     401
+        ${response}=        POST Request        ${users_endpoint}       ${data}     ${authenticationerror_statuscode}
         ${response_str}=        Convert to String       ${response.content}
+        #validation error message from response
         Should be equal      ${response_str}     {"message":"Authentication failed"}
 
 
