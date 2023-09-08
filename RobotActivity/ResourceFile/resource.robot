@@ -17,7 +17,7 @@ Session Creation
 Get Token
         [Documentation]     Get the token from input.json file and return the token
         ${json-data}=      Load JSON From File        input.json
-        ${token}=         Get From Dictionary       ${json-d}       Token
+        ${token}=         Get From Dictionary       ${json-data}       Token
         RETURN      ${token}
 
 
