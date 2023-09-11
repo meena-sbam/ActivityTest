@@ -4,18 +4,18 @@ Library     RequestsLibrary
 Library     JSONLibrary
 Library     Collections
 Library     OperatingSystem
+Library     ./PythonLibrary/lib.py
 Resource        ./ResourceFile/resource.robot
 Test Setup     Session Creation
 Test Teardown      Delete All Sessions
+Resource        output.xml
 
 *** Variables ***
+${baseurl}=     https://gorest.co.in/
 ${users_endpoint}=     /public/v2/users
-${VALID_AUTH_BEARER}=     Get Input       validToken
-${INVALID_AUTH_BEARER}=     Get Input       invalidToken
-${users_endpoint_validtoken}=        /public/v2/users?access-token=${VALID_AUTH_BEARER}
-${users_endpoint_invalidtoken}=        /public/v2/users?access-token=${INVALID_AUTH_BEARER}
 ${headers}=     Create Dictionary       Content-Type=application/json
 ${success_statuscode}=  200
+${Post_successstatus}=  201
 ${notfound_statuscode}=     404
 ${authenticationerror_statuscode}=      401
 
@@ -28,7 +28,7 @@ Verify Response has Pagination
         #Verifying pagination with header availability of 'x-pagination-page'
         should contain      ${response.headers}     x-pagination-page
         #Verifying pagination by performing get request with page details in query parameters
-        ${response_with_page}=    Get Request         /public/v2/users?page=1&per_page=10        200
+        ${response_with_page}=    Get Request         /public/v2/users?page=1&per_page=10        ${success_statuscode}
 
 Verify Response has Valid Json Data
         [Documentation]         Validate the response has valid Json data
@@ -48,6 +48,10 @@ Verify Response Data has email
         ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}       ${headers}
         #Verify email attribute available in response json
         Should Have Value In Json       ${response.json()}      $..email
+        ${email_id}=        Set Variable        ${response.json()[0]["email"]}
+        ${validation_response}=       email_validation     ${email_id}
+        #Should be Equal     validation_response      True
+
 
 Verify entries have similar attributes
         [Documentation]     Validate all the entries in the API response has similar attributes
@@ -100,19 +104,35 @@ Verify Post without Authentication
 
 
 Verify Post with invalid token
-        [Documentation]     Perform Get without Bearer token in the query parameter and validate the response
+        [Documentation]     Perform post with invalid Bearer token in the query parameter and validate the response
         [Tags]      NonFunctional
-        &{data}=        Create Dictionary       name="test"     email="test@gmail.com"      gender="male"
-        ${response}=        POST Request        ${users_endpoint_invalidtoken}       ${data}     ${authenticationerror_statuscode}
+        ${invalidtoken}=      Get Input       invalidToken
+        ${data}=        Get Input       Post_input
+        ${response}=        POST Request        ${users_endpoint}?access-token=${invalidtoken}       ${data}        ${authenticationerror_statuscode}
         ${response_str}=        Convert to String       ${response.content}
         #validation error message from response
         Should be equal      ${response_str}     {"message":"Invalid token"}
 
 Verify Post with Authentication
-        [Documentation]     Perform Get without Bearer token in the query parameter and validate the response
+        [Documentation]     Perform Post with valid token in the query parameter and validate the response
         [Tags]      NonFunctional
-        &{data}=        Create Dictionary       name="test"     email="test@gmail.com"      gender="male"
-        ${response}=        POST Request        ${users_endpoint_validtoken}       ${data}     ${authenticationerror_statuscode}
+        ${validtoken}=      Get Input       validToken
+        ${data}=        Get Input       Post_input
+        ${response}=        POST Request        ${users_endpoint}?access-token=${validtoken}       ${data}       ${Post_successstatus}
+
+Verify Non-SSL Rest endpoint behaviour
+        [Documentation]     Verify Non-SSL Rest endpoint behaviour and ensure response is success
+        [Tags]      NonFunctional
+        Create Session      newsession      ${baseurl}      verify=false
+        ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}       ${headers}
+
+
+Logging test results to mongodb
+        ${mongo}=        Get Input       MongoDb
+        ${username}=        set variable        ${mongo["dbusername"]}
+        ${password}=        set variable        ${mongo["dbpassword"]}
+        ${db_results}=        logresults_mongodb      ${username}     ${password}
+        log to console      ${db_results}
 
 
 
