@@ -143,7 +143,7 @@ Logging test results to mongodb
         ${dbname}=        set variable        ${mongo["dbname"]}
         ${collectionname}=        set variable        ${mongo["collectionname"]}
         ${filename}=        set variable        output.xml
-        ${db_results}=        logresults_mongodb      ${username}     ${password}       ${dbname}       ${collectionname}       ${filename}
+        ${db_results}=        logresults_mongodb       ${username}     ${password}       ${dbname}       ${collectionname}       ${filename}
         log to console      ${db_results}
 
 
