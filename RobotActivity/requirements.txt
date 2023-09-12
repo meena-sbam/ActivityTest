@@ -1,0 +1,10 @@
+Functional Requirements
+1. Verify response has pagination
+2. Verify response has Valid Json Data
+3. Verify Response Data has email address
+4. Verify all entries on list data have similar attributes.
+Non-Functional Requirements
+1. Verify HTTP response codes
+2. Verify REST service without authentication
+3. Verify Non-SSL Rest endpoint behaviour
+• Log results to mongo DB from your test automation suite.

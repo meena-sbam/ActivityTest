@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.9.13 on win32)" generated="20230911 20:54:15.824" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.9.13 on win32)" generated="20230912 10:02:09.153" rpa="false" schemaversion="4">
 <suite id="s1" name="Testcases" source="C:\Users\msm618\PycharmProjects\ActivityTest\RobotActivity\Testcases.robot">
 <test id="s1-t1" name="Verify Response has Pagination" line="24">
 <kw name="Session Creation" library="resource" type="SETUP">
@@ -9,10 +9,10 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:16.949" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:16.949" endtime="20230911 20:54:16.950"/>
+<msg timestamp="20230912 10:02:09.769" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:09.769" endtime="20230912 10:02:09.769"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:16.948" endtime="20230911 20:54:16.950"/>
+<status status="PASS" starttime="20230912 10:02:09.768" endtime="20230912 10:02:09.769"/>
 </kw>
 <kw name="Get Request" library="resource">
 <var>${response}</var>
@@ -27,31 +27,31 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:17.503" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:10.096" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  path_url=/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20230911 20:54:17.503" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:10.096" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  status=200, reason=OK 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:17 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"849234b1e0c8002aa8b875468353c910"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '280', 'x-pagination-total': '2798', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '531373b6-f06c-4f2e-86ab-8d9a4bc3d418', 'x-runtime': '0.036513', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=XQnk1UMvteOm2Yz2YGGe4ivbhXHQrvq4LY7wtBloyj9JTWyTPKWpf4IneDH722zCHdwuHWpYJe6AIqkg37zRi%2FXL0Zll5Aiw0TcxYxhicwFX5HMqh2cx5YNCSCj%2BZ9E%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eab08d1e7324-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
- body=[{"id":5104299,"name":"Manjusha Namboothiri","email":"namboothiri_manjusha@kulas.test","gender":"male","status":"inactive"},{"id":5104295,"name":"Harita Mahajan","email":"mahajan_harita@emmerich.test","gender":"female","status":"inactive"},{"id":5104293,"name":"Bheeshma Pilla","email":"bheeshma_pilla@schinner-ernser.example","gender":"female","status":"inactive"},{"id":5104292,"name":"Omana Embranthiri","email":"omana_embranthiri@hane-gorczany.example","gender":"male","status":"inactive"},{"id":5104291,"name":"Rev. Kamlesh Acharya","email":"kamlesh_rev_acharya@powlowski.test","gender":"female","status":"active"},{"id":5104290,"name":"Dhara Gandhi","email":"gandhi_dhara@boyer.example","gender":"female","status":"active"},{"id":5104289,"name":"Deeptiman Iyer CPA","email":"deeptiman_iyer_cpa@kemmer.test","gender":"female","status":"inactive"},{"id":5104288,"name":"Saroja Khanna","email":"saroja_khanna@lind-robel.example","gender":"male","status":"active"},{"id":5104287,"name":"Bishnu Mehrotra","email":"bishnu_mehrotra@feeney-will.example","gender":"female","status":"active"},{"id":5104286,"name":"Sen. Meena Kakkar","email":"meena_kakkar_sen@simonis-mraz.example","gender":"female","status":"inactive"}] 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:10 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"03098440efc592921b4abb6c35667f0c"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '299', 'x-pagination-total': '2983', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '9a1043a3-0d2e-418f-9ef0-5dff846a776c', 'x-runtime': '0.042672', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=zlzEBxmLgSAwZHLgFZjVs%2BZM7B%2Fho1LaDQ8VbyFin%2Fvcicu8dcjgvTm9JjFTlLi8zRrBdfBgzwt1b6x0BE6lfSrMywGQsC%2BRroKOKVjxOP1%2F6sQhIdS23Hbytocfts0%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556ccf486576ff-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":5143813,"name":"Jagmeet Jha","email":"jagmeet_jha@jast-boehm.test","gender":"female","status":"inactive"},{"id":5143812,"name":"Chandini Guneta","email":"chandini_guneta@schumm.test","gender":"female","status":"active"},{"id":5143811,"name":"Bhoj Naik","email":"bhoj_naik@wuckert.example","gender":"male","status":"inactive"},{"id":5143810,"name":"Ms. Gorakhanatha Kocchar","email":"ms_gorakhanatha_kocchar@volkman-hammes.example","gender":"male","status":"active"},{"id":5143809,"name":"Aatreya Pilla","email":"aatreya_pilla@bogisich.example","gender":"male","status":"inactive"},{"id":5143808,"name":"Saraswati Kaur","email":"saraswati_kaur@welch.test","gender":"male","status":"active"},{"id":5143807,"name":"Kalyani Acharya","email":"acharya_kalyani@stehr.test","gender":"female","status":"inactive"},{"id":5143806,"name":"Dayaananda Ganaka","email":"dayaananda_ganaka@deckow.example","gender":"male","status":"inactive"},{"id":5143804,"name":"Minakshi Dwivedi","email":"minakshi_dwivedi@damore.test","gender":"female","status":"inactive"},{"id":5143803,"name":"Chetanaanand Saini","email":"saini_chetanaanand@macejkovic.example","gender":"female","status":"active"}] 
  </msg>
-<msg timestamp="20230911 20:54:17.503" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:16.951" endtime="20230911 20:54:17.503"/>
+<msg timestamp="20230912 10:02:10.096" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:09.770" endtime="20230912 10:02:10.096"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" starttime="20230911 20:54:17.503" endtime="20230911 20:54:17.504"/>
+<status status="PASS" starttime="20230912 10:02:10.096" endtime="20230912 10:02:10.096"/>
 </return>
-<msg timestamp="20230911 20:54:17.504" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:16.950" endtime="20230911 20:54:17.504"/>
+<msg timestamp="20230912 10:02:10.097" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:09.770" endtime="20230912 10:02:10.097"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${response.headers}</arg>
 <arg>x-pagination-page</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20230911 20:54:17.505" endtime="20230911 20:54:17.505"/>
+<status status="PASS" starttime="20230912 10:02:10.097" endtime="20230912 10:02:10.098"/>
 </kw>
 <kw name="Get Request" library="resource">
 <var>${response_with_page}</var>
@@ -65,34 +65,34 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:17.763" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?page=1&amp;per_page=10&amp;Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:10.347" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?page=1&amp;per_page=10&amp;Create%20Dictionary%20Content-Type=application/json 
  path_url=/public/v2/users?page=1&amp;per_page=10&amp;Create%20Dictionary%20Content-Type=application/json 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20230911 20:54:17.763" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?page=1&amp;per_page=10&amp;Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:10.348" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?page=1&amp;per_page=10&amp;Create%20Dictionary%20Content-Type=application/json 
  status=200, reason=OK 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:17 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"849234b1e0c8002aa8b875468353c910"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '280', 'x-pagination-total': '2798', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '0ebdc079-1fef-4f3c-89fb-34b432007057', 'x-runtime': '0.030901', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=RZkylIm3DeA%2B5h7qXpXv1TJmP6mYxeGJQUXuSIOuK9W%2BKBybNKDfpsI3NHRzBAgwTLyHblJoQioxsjBh2KbFVEG%2FmqXpfji4YkbBmXsUSScrJDlcCD4leBFByHN3fIo%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eab2581f7324-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
- body=[{"id":5104299,"name":"Manjusha Namboothiri","email":"namboothiri_manjusha@kulas.test","gender":"male","status":"inactive"},{"id":5104295,"name":"Harita Mahajan","email":"mahajan_harita@emmerich.test","gender":"female","status":"inactive"},{"id":5104293,"name":"Bheeshma Pilla","email":"bheeshma_pilla@schinner-ernser.example","gender":"female","status":"inactive"},{"id":5104292,"name":"Omana Embranthiri","email":"omana_embranthiri@hane-gorczany.example","gender":"male","status":"inactive"},{"id":5104291,"name":"Rev. Kamlesh Acharya","email":"kamlesh_rev_acharya@powlowski.test","gender":"female","status":"active"},{"id":5104290,"name":"Dhara Gandhi","email":"gandhi_dhara@boyer.example","gender":"female","status":"active"},{"id":5104289,"name":"Deeptiman Iyer CPA","email":"deeptiman_iyer_cpa@kemmer.test","gender":"female","status":"inactive"},{"id":5104288,"name":"Saroja Khanna","email":"saroja_khanna@lind-robel.example","gender":"male","status":"active"},{"id":5104287,"name":"Bishnu Mehrotra","email":"bishnu_mehrotra@feeney-will.example","gender":"female","status":"active"},{"id":5104286,"name":"Sen. Meena Kakkar","email":"meena_kakkar_sen@simonis-mraz.example","gender":"female","status":"inactive"}] 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:10 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"03098440efc592921b4abb6c35667f0c"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '299', 'x-pagination-total': '2983', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '08ff8c33-ad86-4ab1-9c3a-fa926041cd68', 'x-runtime': '0.036036', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=H1ZuyVUwAs2RuyTbgT3WqbaEU2fE4Y0WUeANzYfgKCkmZj8wbJ9f%2B2bu%2BKvXtQmmXVxHvss4Vy7XvPbjcy%2BR4Cphy8x472ZO1MOvQ%2F0dqCaz4pwULVwxoLXAo1qvCCs%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556cd0da1376ff-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":5143813,"name":"Jagmeet Jha","email":"jagmeet_jha@jast-boehm.test","gender":"female","status":"inactive"},{"id":5143812,"name":"Chandini Guneta","email":"chandini_guneta@schumm.test","gender":"female","status":"active"},{"id":5143811,"name":"Bhoj Naik","email":"bhoj_naik@wuckert.example","gender":"male","status":"inactive"},{"id":5143810,"name":"Ms. Gorakhanatha Kocchar","email":"ms_gorakhanatha_kocchar@volkman-hammes.example","gender":"male","status":"active"},{"id":5143809,"name":"Aatreya Pilla","email":"aatreya_pilla@bogisich.example","gender":"male","status":"inactive"},{"id":5143808,"name":"Saraswati Kaur","email":"saraswati_kaur@welch.test","gender":"male","status":"active"},{"id":5143807,"name":"Kalyani Acharya","email":"acharya_kalyani@stehr.test","gender":"female","status":"inactive"},{"id":5143806,"name":"Dayaananda Ganaka","email":"dayaananda_ganaka@deckow.example","gender":"male","status":"inactive"},{"id":5143804,"name":"Minakshi Dwivedi","email":"minakshi_dwivedi@damore.test","gender":"female","status":"inactive"},{"id":5143803,"name":"Chetanaanand Saini","email":"saini_chetanaanand@macejkovic.example","gender":"female","status":"active"}] 
  </msg>
-<msg timestamp="20230911 20:54:17.768" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:17.506" endtime="20230911 20:54:17.769"/>
+<msg timestamp="20230912 10:02:10.348" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:10.099" endtime="20230912 10:02:10.348"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" starttime="20230911 20:54:17.769" endtime="20230911 20:54:17.769"/>
+<status status="PASS" starttime="20230912 10:02:10.348" endtime="20230912 10:02:10.348"/>
 </return>
-<msg timestamp="20230911 20:54:17.769" level="INFO">${response_with_page} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:17.506" endtime="20230911 20:54:17.769"/>
+<msg timestamp="20230912 10:02:10.348" level="INFO">${response_with_page} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:10.098" endtime="20230912 10:02:10.348"/>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:17.770" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:17.770" endtime="20230911 20:54:17.770"/>
+<msg timestamp="20230912 10:02:10.349" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:10.349" endtime="20230912 10:02:10.349"/>
 </kw>
 <doc>Validate the API response has pagination</doc>
 <tag>Functional</tag>
-<status status="PASS" starttime="20230911 20:54:16.947" endtime="20230911 20:54:17.770"/>
+<status status="PASS" starttime="20230912 10:02:09.768" endtime="20230912 10:02:10.349"/>
 </test>
 <test id="s1-t2" name="Verify Response has Valid Json Data" line="33">
 <kw name="Session Creation" library="resource" type="SETUP">
@@ -102,10 +102,10 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:17.772" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:17.772" endtime="20230911 20:54:17.772"/>
+<msg timestamp="20230912 10:02:10.352" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:10.352" endtime="20230912 10:02:10.352"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:17.771" endtime="20230911 20:54:17.772"/>
+<status status="PASS" starttime="20230912 10:02:10.351" endtime="20230912 10:02:10.352"/>
 </kw>
 <kw name="Get Request" library="resource">
 <var>${response}</var>
@@ -120,60 +120,60 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:18.090" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:10.663" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  path_url=/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20230911 20:54:18.090" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:10.663" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  status=200, reason=OK 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:18 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"849234b1e0c8002aa8b875468353c910"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '280', 'x-pagination-total': '2798', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'be5e7516-1e3c-45ea-8376-360c081b9c00', 'x-runtime': '0.030723', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Kwfce0wBdFnsFNnHbcJgNb6OOa%2B%2BzdLg2YArMltSw0%2BRb8KTWy04PkRA2AuQZ2QuN%2BdMlQLe6KHHqx%2FE8B33PhpoM92ZgzrRrH7A7av96gyAzazkCgrBA8QH%2BhkVgLE%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eab4683e06e1-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
- body=[{"id":5104299,"name":"Manjusha Namboothiri","email":"namboothiri_manjusha@kulas.test","gender":"male","status":"inactive"},{"id":5104295,"name":"Harita Mahajan","email":"mahajan_harita@emmerich.test","gender":"female","status":"inactive"},{"id":5104293,"name":"Bheeshma Pilla","email":"bheeshma_pilla@schinner-ernser.example","gender":"female","status":"inactive"},{"id":5104292,"name":"Omana Embranthiri","email":"omana_embranthiri@hane-gorczany.example","gender":"male","status":"inactive"},{"id":5104291,"name":"Rev. Kamlesh Acharya","email":"kamlesh_rev_acharya@powlowski.test","gender":"female","status":"active"},{"id":5104290,"name":"Dhara Gandhi","email":"gandhi_dhara@boyer.example","gender":"female","status":"active"},{"id":5104289,"name":"Deeptiman Iyer CPA","email":"deeptiman_iyer_cpa@kemmer.test","gender":"female","status":"inactive"},{"id":5104288,"name":"Saroja Khanna","email":"saroja_khanna@lind-robel.example","gender":"male","status":"active"},{"id":5104287,"name":"Bishnu Mehrotra","email":"bishnu_mehrotra@feeney-will.example","gender":"female","status":"active"},{"id":5104286,"name":"Sen. Meena Kakkar","email":"meena_kakkar_sen@simonis-mraz.example","gender":"female","status":"inactive"}] 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:10 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"03098440efc592921b4abb6c35667f0c"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '299', 'x-pagination-total': '2983', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'e795afb5-8d34-46b0-bcb3-2e7476423df8', 'x-runtime': '0.036999', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=AZa2F1nAJvL9THl5o722PMGB%2Fc%2Fn6pytGrQLZg9fzYmqYOFgHVsbLsxothV%2BT7lMGbDwg5Sft8HrQ0Xp1KAzcfBf3%2BQ8%2FRE1JgvbfYG5Dk0FhnTLKGcFdCwigE0mOic%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556cd2e9347312-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":5143813,"name":"Jagmeet Jha","email":"jagmeet_jha@jast-boehm.test","gender":"female","status":"inactive"},{"id":5143812,"name":"Chandini Guneta","email":"chandini_guneta@schumm.test","gender":"female","status":"active"},{"id":5143811,"name":"Bhoj Naik","email":"bhoj_naik@wuckert.example","gender":"male","status":"inactive"},{"id":5143810,"name":"Ms. Gorakhanatha Kocchar","email":"ms_gorakhanatha_kocchar@volkman-hammes.example","gender":"male","status":"active"},{"id":5143809,"name":"Aatreya Pilla","email":"aatreya_pilla@bogisich.example","gender":"male","status":"inactive"},{"id":5143808,"name":"Saraswati Kaur","email":"saraswati_kaur@welch.test","gender":"male","status":"active"},{"id":5143807,"name":"Kalyani Acharya","email":"acharya_kalyani@stehr.test","gender":"female","status":"inactive"},{"id":5143806,"name":"Dayaananda Ganaka","email":"dayaananda_ganaka@deckow.example","gender":"male","status":"inactive"},{"id":5143804,"name":"Minakshi Dwivedi","email":"minakshi_dwivedi@damore.test","gender":"female","status":"inactive"},{"id":5143803,"name":"Chetanaanand Saini","email":"saini_chetanaanand@macejkovic.example","gender":"female","status":"active"}] 
  </msg>
-<msg timestamp="20230911 20:54:18.090" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:17.773" endtime="20230911 20:54:18.090"/>
+<msg timestamp="20230912 10:02:10.663" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:10.354" endtime="20230912 10:02:10.664"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" starttime="20230911 20:54:18.090" endtime="20230911 20:54:18.090"/>
+<status status="PASS" starttime="20230912 10:02:10.664" endtime="20230912 10:02:10.664"/>
 </return>
-<msg timestamp="20230911 20:54:18.091" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:17.773" endtime="20230911 20:54:18.091"/>
+<msg timestamp="20230912 10:02:10.664" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:10.353" endtime="20230912 10:02:10.664"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${response.headers["Content-Type"]}</arg>
 <arg>application/json</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20230911 20:54:18.091" endtime="20230911 20:54:18.092"/>
+<status status="PASS" starttime="20230912 10:02:10.664" endtime="20230912 10:02:10.665"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${data}</var>
 <arg>json.loads(json.dumps(${response.content}))</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230911 20:54:18.093" level="INFO">${data} = [{'id': 5104299, 'name': 'Manjusha Namboothiri', 'email': 'namboothiri_manjusha@kulas.test', 'gender': 'male', 'status': 'inactive'}, {'id': 5104295, 'name': 'Harita Mahajan', 'email': 'mahajan_harita...</msg>
-<status status="PASS" starttime="20230911 20:54:18.092" endtime="20230911 20:54:18.093"/>
+<msg timestamp="20230912 10:02:10.666" level="INFO">${data} = [{'id': 5143813, 'name': 'Jagmeet Jha', 'email': 'jagmeet_jha@jast-boehm.test', 'gender': 'female', 'status': 'inactive'}, {'id': 5143812, 'name': 'Chandini Guneta', 'email': 'chandini_guneta@schumm.t...</msg>
+<status status="PASS" starttime="20230912 10:02:10.665" endtime="20230912 10:02:10.666"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${type}</var>
 <arg>type(${data[0]}).__name__</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230911 20:54:18.094" level="INFO">${type} = dict</msg>
-<status status="PASS" starttime="20230911 20:54:18.093" endtime="20230911 20:54:18.094"/>
+<msg timestamp="20230912 10:02:10.667" level="INFO">${type} = dict</msg>
+<status status="PASS" starttime="20230912 10:02:10.667" endtime="20230912 10:02:10.667"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${type}</arg>
 <arg>dict</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:18.094" endtime="20230911 20:54:18.094"/>
+<status status="PASS" starttime="20230912 10:02:10.668" endtime="20230912 10:02:10.668"/>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:18.095" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:18.095" endtime="20230911 20:54:18.095"/>
+<msg timestamp="20230912 10:02:10.668" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:10.668" endtime="20230912 10:02:10.668"/>
 </kw>
 <doc>Validate the response has valid Json data</doc>
 <tag>Functional</tag>
-<status status="PASS" starttime="20230911 20:54:17.771" endtime="20230911 20:54:18.095"/>
+<status status="PASS" starttime="20230912 10:02:10.350" endtime="20230912 10:02:10.669"/>
 </test>
 <test id="s1-t3" name="Verify Response Data has email" line="45">
 <kw name="Session Creation" library="resource" type="SETUP">
@@ -183,10 +183,10 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:18.097" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:18.097" endtime="20230911 20:54:18.097"/>
+<msg timestamp="20230912 10:02:10.670" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:10.670" endtime="20230912 10:02:10.671"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.096" endtime="20230911 20:54:18.097"/>
+<status status="PASS" starttime="20230912 10:02:10.670" endtime="20230912 10:02:10.671"/>
 </kw>
 <kw name="Get Request" library="resource">
 <var>${response}</var>
@@ -201,53 +201,53 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:18.433" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:11.328" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  path_url=/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20230911 20:54:18.433" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:11.329" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  status=200, reason=OK 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:18 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"849234b1e0c8002aa8b875468353c910"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '280', 'x-pagination-total': '2798', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'd804cb9a-83e9-4e35-b8eb-35dd743f82c4', 'x-runtime': '0.033731', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=EwXctEHqCzUjBRkp9IFcqJegwM3vob%2F0ESuiRmUMyu0l1g%2FUG6miOS59UTLlf64WJqtNWAPmQfX7XC0MxbTmr4YF6PsVgqVJkX%2B2z4MsUXMRmSCI8hT0zGCJ5MkjXoY%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eab67a4a8883-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
- body=[{"id":5104299,"name":"Manjusha Namboothiri","email":"namboothiri_manjusha@kulas.test","gender":"male","status":"inactive"},{"id":5104295,"name":"Harita Mahajan","email":"mahajan_harita@emmerich.test","gender":"female","status":"inactive"},{"id":5104293,"name":"Bheeshma Pilla","email":"bheeshma_pilla@schinner-ernser.example","gender":"female","status":"inactive"},{"id":5104292,"name":"Omana Embranthiri","email":"omana_embranthiri@hane-gorczany.example","gender":"male","status":"inactive"},{"id":5104291,"name":"Rev. Kamlesh Acharya","email":"kamlesh_rev_acharya@powlowski.test","gender":"female","status":"active"},{"id":5104290,"name":"Dhara Gandhi","email":"gandhi_dhara@boyer.example","gender":"female","status":"active"},{"id":5104289,"name":"Deeptiman Iyer CPA","email":"deeptiman_iyer_cpa@kemmer.test","gender":"female","status":"inactive"},{"id":5104288,"name":"Saroja Khanna","email":"saroja_khanna@lind-robel.example","gender":"male","status":"active"},{"id":5104287,"name":"Bishnu Mehrotra","email":"bishnu_mehrotra@feeney-will.example","gender":"female","status":"active"},{"id":5104286,"name":"Sen. Meena Kakkar","email":"meena_kakkar_sen@simonis-mraz.example","gender":"female","status":"inactive"}] 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:11 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"03098440efc592921b4abb6c35667f0c"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '299', 'x-pagination-total': '2983', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '77f9ff2f-b455-401c-b5fd-015a1455118a', 'x-runtime': '0.041297', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=JYGlUmsmbQMgG8Ez5vgYZ9ODvDcPUoqThWO9x9HXn7niUntBw1bNg2wXjnkQNcckO0GSXpiEuTRiILasFtV4A5gtvNdiqGUEZQZkho%2BKxOQRNBKZBwYesnH%2B%2FQryFaA%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556cd4d976730e-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":5143813,"name":"Jagmeet Jha","email":"jagmeet_jha@jast-boehm.test","gender":"female","status":"inactive"},{"id":5143812,"name":"Chandini Guneta","email":"chandini_guneta@schumm.test","gender":"female","status":"active"},{"id":5143811,"name":"Bhoj Naik","email":"bhoj_naik@wuckert.example","gender":"male","status":"inactive"},{"id":5143810,"name":"Ms. Gorakhanatha Kocchar","email":"ms_gorakhanatha_kocchar@volkman-hammes.example","gender":"male","status":"active"},{"id":5143809,"name":"Aatreya Pilla","email":"aatreya_pilla@bogisich.example","gender":"male","status":"inactive"},{"id":5143808,"name":"Saraswati Kaur","email":"saraswati_kaur@welch.test","gender":"male","status":"active"},{"id":5143807,"name":"Kalyani Acharya","email":"acharya_kalyani@stehr.test","gender":"female","status":"inactive"},{"id":5143806,"name":"Dayaananda Ganaka","email":"dayaananda_ganaka@deckow.example","gender":"male","status":"inactive"},{"id":5143804,"name":"Minakshi Dwivedi","email":"minakshi_dwivedi@damore.test","gender":"female","status":"inactive"},{"id":5143803,"name":"Chetanaanand Saini","email":"saini_chetanaanand@macejkovic.example","gender":"female","status":"active"}] 
  </msg>
-<msg timestamp="20230911 20:54:18.433" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:18.098" endtime="20230911 20:54:18.433"/>
+<msg timestamp="20230912 10:02:11.329" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:10.671" endtime="20230912 10:02:11.329"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" starttime="20230911 20:54:18.433" endtime="20230911 20:54:18.433"/>
+<status status="PASS" starttime="20230912 10:02:11.329" endtime="20230912 10:02:11.329"/>
 </return>
-<msg timestamp="20230911 20:54:18.433" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:18.098" endtime="20230911 20:54:18.433"/>
+<msg timestamp="20230912 10:02:11.329" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:10.671" endtime="20230912 10:02:11.329"/>
 </kw>
 <kw name="Should Have Value In Json" library="JSONLibrary">
 <arg>${response.json()}</arg>
 <arg>$..email</arg>
 <doc>Should Have Value In JSON using JSONPath</doc>
-<status status="PASS" starttime="20230911 20:54:18.434" endtime="20230911 20:54:18.469"/>
+<status status="PASS" starttime="20230912 10:02:11.330" endtime="20230912 10:02:11.358"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${email_id}</var>
 <arg>${response.json()[0]["email"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230911 20:54:18.470" level="INFO">${email_id} = namboothiri_manjusha@kulas.test</msg>
-<status status="PASS" starttime="20230911 20:54:18.470" endtime="20230911 20:54:18.470"/>
+<msg timestamp="20230912 10:02:11.359" level="INFO">${email_id} = jagmeet_jha@jast-boehm.test</msg>
+<status status="PASS" starttime="20230912 10:02:11.358" endtime="20230912 10:02:11.359"/>
 </kw>
 <kw name="Email Validation" library="lib">
 <var>${validation_response}</var>
 <arg>${email_id}</arg>
-<msg timestamp="20230911 20:54:18.471" level="INFO">${validation_response} = True</msg>
-<status status="PASS" starttime="20230911 20:54:18.471" endtime="20230911 20:54:18.471"/>
+<msg timestamp="20230912 10:02:11.360" level="INFO">${validation_response} = True</msg>
+<status status="PASS" starttime="20230912 10:02:11.359" endtime="20230912 10:02:11.360"/>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:18.472" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:18.472" endtime="20230911 20:54:18.472"/>
+<msg timestamp="20230912 10:02:11.360" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:11.360" endtime="20230912 10:02:11.360"/>
 </kw>
 <doc>Validate API response has 'email' attribute</doc>
 <tag>Functional</tag>
-<status status="PASS" starttime="20230911 20:54:18.096" endtime="20230911 20:54:18.472"/>
+<status status="PASS" starttime="20230912 10:02:10.669" endtime="20230912 10:02:11.361"/>
 </test>
 <test id="s1-t4" name="Verify entries have similar attributes" line="56">
 <kw name="Session Creation" library="resource" type="SETUP">
@@ -257,10 +257,10 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:18.474" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:18.474" endtime="20230911 20:54:18.474"/>
+<msg timestamp="20230912 10:02:11.362" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:11.362" endtime="20230912 10:02:11.362"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.473" endtime="20230911 20:54:18.474"/>
+<status status="PASS" starttime="20230912 10:02:11.362" endtime="20230912 10:02:11.363"/>
 </kw>
 <kw name="Get Request" library="resource">
 <var>${response}</var>
@@ -275,46 +275,46 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:18.754" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:11.676" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  path_url=/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20230911 20:54:18.754" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:11.676" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  status=200, reason=OK 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:18 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"849234b1e0c8002aa8b875468353c910"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '280', 'x-pagination-total': '2798', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '50f474fb-53ae-4413-bdfc-66a3ab3a47ca', 'x-runtime': '0.022782', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2BmMxvBfGgCjHc2z92qLJzly38qWm8a3lH6D%2Fpaa3UUNmlwliXi8fw1Hnp2OBEpzlZWUTwctTdm5CHEG0za%2F4u5qEfIzlOrXBIgthFBBt%2BK4KGKliq1M5PS2LhoZr5zs%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eab8eb763c8d-CDG', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
- body=[{"id":5104299,"name":"Manjusha Namboothiri","email":"namboothiri_manjusha@kulas.test","gender":"male","status":"inactive"},{"id":5104295,"name":"Harita Mahajan","email":"mahajan_harita@emmerich.test","gender":"female","status":"inactive"},{"id":5104293,"name":"Bheeshma Pilla","email":"bheeshma_pilla@schinner-ernser.example","gender":"female","status":"inactive"},{"id":5104292,"name":"Omana Embranthiri","email":"omana_embranthiri@hane-gorczany.example","gender":"male","status":"inactive"},{"id":5104291,"name":"Rev. Kamlesh Acharya","email":"kamlesh_rev_acharya@powlowski.test","gender":"female","status":"active"},{"id":5104290,"name":"Dhara Gandhi","email":"gandhi_dhara@boyer.example","gender":"female","status":"active"},{"id":5104289,"name":"Deeptiman Iyer CPA","email":"deeptiman_iyer_cpa@kemmer.test","gender":"female","status":"inactive"},{"id":5104288,"name":"Saroja Khanna","email":"saroja_khanna@lind-robel.example","gender":"male","status":"active"},{"id":5104287,"name":"Bishnu Mehrotra","email":"bishnu_mehrotra@feeney-will.example","gender":"female","status":"active"},{"id":5104286,"name":"Sen. Meena Kakkar","email":"meena_kakkar_sen@simonis-mraz.example","gender":"female","status":"inactive"}] 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:11 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"03098440efc592921b4abb6c35667f0c"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '299', 'x-pagination-total': '2983', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'ac7e0b54-b302-4683-8174-4b55e3c5b8c8', 'x-runtime': '0.032085', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=1r2nO1ZyBKmX69qO4%2BXhPcLLLNbWMeuUIWRbKxydW0xLwz%2FOxSpIVcyJdIYh5LlIgjXViu5ygobYsiP9gIZ3AwGJFKPoCTwAoznUmgxHAjG4%2FVA4%2BnPOpqkhZejyBNA%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556cd92cfcd174-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":5143813,"name":"Jagmeet Jha","email":"jagmeet_jha@jast-boehm.test","gender":"female","status":"inactive"},{"id":5143812,"name":"Chandini Guneta","email":"chandini_guneta@schumm.test","gender":"female","status":"active"},{"id":5143811,"name":"Bhoj Naik","email":"bhoj_naik@wuckert.example","gender":"male","status":"inactive"},{"id":5143810,"name":"Ms. Gorakhanatha Kocchar","email":"ms_gorakhanatha_kocchar@volkman-hammes.example","gender":"male","status":"active"},{"id":5143809,"name":"Aatreya Pilla","email":"aatreya_pilla@bogisich.example","gender":"male","status":"inactive"},{"id":5143808,"name":"Saraswati Kaur","email":"saraswati_kaur@welch.test","gender":"male","status":"active"},{"id":5143807,"name":"Kalyani Acharya","email":"acharya_kalyani@stehr.test","gender":"female","status":"inactive"},{"id":5143806,"name":"Dayaananda Ganaka","email":"dayaananda_ganaka@deckow.example","gender":"male","status":"inactive"},{"id":5143804,"name":"Minakshi Dwivedi","email":"minakshi_dwivedi@damore.test","gender":"female","status":"inactive"},{"id":5143803,"name":"Chetanaanand Saini","email":"saini_chetanaanand@macejkovic.example","gender":"female","status":"active"}] 
  </msg>
-<msg timestamp="20230911 20:54:18.754" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:18.475" endtime="20230911 20:54:18.754"/>
+<msg timestamp="20230912 10:02:11.676" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:11.363" endtime="20230912 10:02:11.676"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" starttime="20230911 20:54:18.754" endtime="20230911 20:54:18.754"/>
+<status status="PASS" starttime="20230912 10:02:11.676" endtime="20230912 10:02:11.676"/>
 </return>
-<msg timestamp="20230911 20:54:18.754" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:18.474" endtime="20230911 20:54:18.754"/>
+<msg timestamp="20230912 10:02:11.677" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:11.363" endtime="20230912 10:02:11.677"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${data}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230911 20:54:18.755" level="INFO">${data} = [{'id': 5104299, 'name': 'Manjusha Namboothiri', 'email': 'namboothiri_manjusha@kulas.test', 'gender': 'male', 'status': 'inactive'}, {'id': 5104295, 'name': 'Harita Mahajan', 'email': 'mahajan_harita...</msg>
-<status status="PASS" starttime="20230911 20:54:18.755" endtime="20230911 20:54:18.756"/>
+<msg timestamp="20230912 10:02:11.678" level="INFO">${data} = [{'id': 5143813, 'name': 'Jagmeet Jha', 'email': 'jagmeet_jha@jast-boehm.test', 'gender': 'female', 'status': 'inactive'}, {'id': 5143812, 'name': 'Chandini Guneta', 'email': 'chandini_guneta@schumm.t...</msg>
+<status status="PASS" starttime="20230912 10:02:11.677" endtime="20230912 10:02:11.678"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${length_data}</var>
 <arg>${data}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.756" level="INFO">Length is 10</msg>
-<msg timestamp="20230911 20:54:18.756" level="INFO">${length_data} = 10</msg>
-<status status="PASS" starttime="20230911 20:54:18.756" endtime="20230911 20:54:18.756"/>
+<msg timestamp="20230912 10:02:11.679" level="INFO">Length is 10</msg>
+<msg timestamp="20230912 10:02:11.679" level="INFO">${length_data} = 10</msg>
+<status status="PASS" starttime="20230912 10:02:11.679" endtime="20230912 10:02:11.679"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${list_userdata}</var>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20230911 20:54:18.757" level="INFO">${list_userdata} = []</msg>
-<status status="PASS" starttime="20230911 20:54:18.757" endtime="20230911 20:54:18.757"/>
+<msg timestamp="20230912 10:02:11.679" level="INFO">${list_userdata} = []</msg>
+<status status="PASS" starttime="20230912 10:02:11.679" endtime="20230912 10:02:11.679"/>
 </kw>
 <for flavor="IN">
 <var>${content}</var>
@@ -325,9 +325,9 @@
 <arg>${list_userdata}</arg>
 <arg>${content}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.758" endtime="20230911 20:54:18.758"/>
+<status status="PASS" starttime="20230912 10:02:11.681" endtime="20230912 10:02:11.681"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.758" endtime="20230911 20:54:18.758"/>
+<status status="PASS" starttime="20230912 10:02:11.681" endtime="20230912 10:02:11.681"/>
 </iter>
 <iter>
 <var name="${content}">name</var>
@@ -335,9 +335,9 @@
 <arg>${list_userdata}</arg>
 <arg>${content}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.759" endtime="20230911 20:54:18.759"/>
+<status status="PASS" starttime="20230912 10:02:11.681" endtime="20230912 10:02:11.682"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.759" endtime="20230911 20:54:18.759"/>
+<status status="PASS" starttime="20230912 10:02:11.681" endtime="20230912 10:02:11.682"/>
 </iter>
 <iter>
 <var name="${content}">email</var>
@@ -345,9 +345,9 @@
 <arg>${list_userdata}</arg>
 <arg>${content}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.759" endtime="20230911 20:54:18.759"/>
+<status status="PASS" starttime="20230912 10:02:11.682" endtime="20230912 10:02:11.682"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.759" endtime="20230911 20:54:18.759"/>
+<status status="PASS" starttime="20230912 10:02:11.682" endtime="20230912 10:02:11.682"/>
 </iter>
 <iter>
 <var name="${content}">gender</var>
@@ -355,9 +355,9 @@
 <arg>${list_userdata}</arg>
 <arg>${content}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.760" endtime="20230911 20:54:18.760"/>
+<status status="PASS" starttime="20230912 10:02:11.682" endtime="20230912 10:02:11.682"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.760" endtime="20230911 20:54:18.760"/>
+<status status="PASS" starttime="20230912 10:02:11.682" endtime="20230912 10:02:11.683"/>
 </iter>
 <iter>
 <var name="${content}">status</var>
@@ -365,19 +365,19 @@
 <arg>${list_userdata}</arg>
 <arg>${content}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.760" endtime="20230911 20:54:18.761"/>
+<status status="PASS" starttime="20230912 10:02:11.683" endtime="20230912 10:02:11.683"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.760" endtime="20230911 20:54:18.761"/>
+<status status="PASS" starttime="20230912 10:02:11.683" endtime="20230912 10:02:11.683"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.757" endtime="20230911 20:54:18.761"/>
+<status status="PASS" starttime="20230912 10:02:11.680" endtime="20230912 10:02:11.683"/>
 </for>
 <kw name="Get Length" library="BuiltIn">
 <var>${list_userdata_length}</var>
 <arg>${list_userdata}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.761" level="INFO">Length is 5</msg>
-<msg timestamp="20230911 20:54:18.761" level="INFO">${list_userdata_length} = 5</msg>
-<status status="PASS" starttime="20230911 20:54:18.761" endtime="20230911 20:54:18.761"/>
+<msg timestamp="20230912 10:02:11.683" level="INFO">Length is 5</msg>
+<msg timestamp="20230912 10:02:11.684" level="INFO">${list_userdata_length} = 5</msg>
+<status status="PASS" starttime="20230912 10:02:11.683" endtime="20230912 10:02:11.684"/>
 </kw>
 <for flavor="IN RANGE">
 <var>${index}</var>
@@ -389,22 +389,22 @@
 <var>${keys}</var>
 <arg>${data[${index}]}</arg>
 <doc>Returns keys of the given ``dictionary`` as a list.</doc>
-<msg timestamp="20230911 20:54:18.763" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
-<status status="PASS" starttime="20230911 20:54:18.762" endtime="20230911 20:54:18.763"/>
+<msg timestamp="20230912 10:02:11.685" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
+<status status="PASS" starttime="20230912 10:02:11.684" endtime="20230912 10:02:11.685"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${keys_length}</var>
 <arg>${keys}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.763" level="INFO">Length is 5</msg>
-<msg timestamp="20230911 20:54:18.763" level="INFO">${keys_length} = 5</msg>
-<status status="PASS" starttime="20230911 20:54:18.763" endtime="20230911 20:54:18.763"/>
+<msg timestamp="20230912 10:02:11.686" level="INFO">Length is 5</msg>
+<msg timestamp="20230912 10:02:11.686" level="INFO">${keys_length} = 5</msg>
+<status status="PASS" starttime="20230912 10:02:11.685" endtime="20230912 10:02:11.686"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_userdata_length}</arg>
 <arg>${keys_length}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:18.763" endtime="20230911 20:54:18.763"/>
+<status status="PASS" starttime="20230912 10:02:11.686" endtime="20230912 10:02:11.686"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
@@ -415,9 +415,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.763" endtime="20230911 20:54:18.764"/>
+<status status="PASS" starttime="20230912 10:02:11.686" endtime="20230912 10:02:11.687"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.763" endtime="20230911 20:54:18.764"/>
+<status status="PASS" starttime="20230912 10:02:11.686" endtime="20230912 10:02:11.687"/>
 </iter>
 <iter>
 <var name="${i}">gender</var>
@@ -425,9 +425,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.764" endtime="20230911 20:54:18.764"/>
+<status status="PASS" starttime="20230912 10:02:11.687" endtime="20230912 10:02:11.687"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.764" endtime="20230911 20:54:18.764"/>
+<status status="PASS" starttime="20230912 10:02:11.687" endtime="20230912 10:02:11.687"/>
 </iter>
 <iter>
 <var name="${i}">id</var>
@@ -435,9 +435,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.764" endtime="20230911 20:54:18.764"/>
+<status status="PASS" starttime="20230912 10:02:11.688" endtime="20230912 10:02:11.688"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.764" endtime="20230911 20:54:18.764"/>
+<status status="PASS" starttime="20230912 10:02:11.687" endtime="20230912 10:02:11.688"/>
 </iter>
 <iter>
 <var name="${i}">name</var>
@@ -445,9 +445,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.764" endtime="20230911 20:54:18.765"/>
+<status status="PASS" starttime="20230912 10:02:11.688" endtime="20230912 10:02:11.688"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.764" endtime="20230911 20:54:18.765"/>
+<status status="PASS" starttime="20230912 10:02:11.688" endtime="20230912 10:02:11.688"/>
 </iter>
 <iter>
 <var name="${i}">status</var>
@@ -455,13 +455,13 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.765" endtime="20230911 20:54:18.765"/>
+<status status="PASS" starttime="20230912 10:02:11.689" endtime="20230912 10:02:11.689"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.765" endtime="20230911 20:54:18.765"/>
+<status status="PASS" starttime="20230912 10:02:11.688" endtime="20230912 10:02:11.689"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.763" endtime="20230911 20:54:18.765"/>
+<status status="PASS" starttime="20230912 10:02:11.686" endtime="20230912 10:02:11.689"/>
 </for>
-<status status="PASS" starttime="20230911 20:54:18.762" endtime="20230911 20:54:18.765"/>
+<status status="PASS" starttime="20230912 10:02:11.684" endtime="20230912 10:02:11.689"/>
 </iter>
 <iter>
 <var name="${index}">2</var>
@@ -469,22 +469,22 @@
 <var>${keys}</var>
 <arg>${data[${index}]}</arg>
 <doc>Returns keys of the given ``dictionary`` as a list.</doc>
-<msg timestamp="20230911 20:54:18.766" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
-<status status="PASS" starttime="20230911 20:54:18.765" endtime="20230911 20:54:18.766"/>
+<msg timestamp="20230912 10:02:11.690" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
+<status status="PASS" starttime="20230912 10:02:11.689" endtime="20230912 10:02:11.690"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${keys_length}</var>
 <arg>${keys}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.766" level="INFO">Length is 5</msg>
-<msg timestamp="20230911 20:54:18.766" level="INFO">${keys_length} = 5</msg>
-<status status="PASS" starttime="20230911 20:54:18.766" endtime="20230911 20:54:18.766"/>
+<msg timestamp="20230912 10:02:11.690" level="INFO">Length is 5</msg>
+<msg timestamp="20230912 10:02:11.691" level="INFO">${keys_length} = 5</msg>
+<status status="PASS" starttime="20230912 10:02:11.690" endtime="20230912 10:02:11.691"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_userdata_length}</arg>
 <arg>${keys_length}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:18.766" endtime="20230911 20:54:18.766"/>
+<status status="PASS" starttime="20230912 10:02:11.691" endtime="20230912 10:02:11.691"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
@@ -495,9 +495,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.766" endtime="20230911 20:54:18.767"/>
+<status status="PASS" starttime="20230912 10:02:11.691" endtime="20230912 10:02:11.692"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.766" endtime="20230911 20:54:18.767"/>
+<status status="PASS" starttime="20230912 10:02:11.691" endtime="20230912 10:02:11.692"/>
 </iter>
 <iter>
 <var name="${i}">gender</var>
@@ -505,9 +505,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.767" endtime="20230911 20:54:18.767"/>
+<status status="PASS" starttime="20230912 10:02:11.692" endtime="20230912 10:02:11.692"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.767" endtime="20230911 20:54:18.767"/>
+<status status="PASS" starttime="20230912 10:02:11.692" endtime="20230912 10:02:11.692"/>
 </iter>
 <iter>
 <var name="${i}">id</var>
@@ -515,9 +515,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.767" endtime="20230911 20:54:18.767"/>
+<status status="PASS" starttime="20230912 10:02:11.692" endtime="20230912 10:02:11.692"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.767" endtime="20230911 20:54:18.767"/>
+<status status="PASS" starttime="20230912 10:02:11.692" endtime="20230912 10:02:11.692"/>
 </iter>
 <iter>
 <var name="${i}">name</var>
@@ -525,9 +525,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.768" endtime="20230911 20:54:18.768"/>
+<status status="PASS" starttime="20230912 10:02:11.693" endtime="20230912 10:02:11.693"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.767" endtime="20230911 20:54:18.768"/>
+<status status="PASS" starttime="20230912 10:02:11.693" endtime="20230912 10:02:11.693"/>
 </iter>
 <iter>
 <var name="${i}">status</var>
@@ -535,13 +535,13 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.768" endtime="20230911 20:54:18.768"/>
+<status status="PASS" starttime="20230912 10:02:11.693" endtime="20230912 10:02:11.693"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.768" endtime="20230911 20:54:18.768"/>
+<status status="PASS" starttime="20230912 10:02:11.693" endtime="20230912 10:02:11.693"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.766" endtime="20230911 20:54:18.768"/>
+<status status="PASS" starttime="20230912 10:02:11.691" endtime="20230912 10:02:11.694"/>
 </for>
-<status status="PASS" starttime="20230911 20:54:18.765" endtime="20230911 20:54:18.768"/>
+<status status="PASS" starttime="20230912 10:02:11.689" endtime="20230912 10:02:11.694"/>
 </iter>
 <iter>
 <var name="${index}">3</var>
@@ -549,22 +549,22 @@
 <var>${keys}</var>
 <arg>${data[${index}]}</arg>
 <doc>Returns keys of the given ``dictionary`` as a list.</doc>
-<msg timestamp="20230911 20:54:18.769" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
-<status status="PASS" starttime="20230911 20:54:18.768" endtime="20230911 20:54:18.769"/>
+<msg timestamp="20230912 10:02:11.695" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
+<status status="PASS" starttime="20230912 10:02:11.694" endtime="20230912 10:02:11.695"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${keys_length}</var>
 <arg>${keys}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.769" level="INFO">Length is 5</msg>
-<msg timestamp="20230911 20:54:18.769" level="INFO">${keys_length} = 5</msg>
-<status status="PASS" starttime="20230911 20:54:18.769" endtime="20230911 20:54:18.769"/>
+<msg timestamp="20230912 10:02:11.695" level="INFO">Length is 5</msg>
+<msg timestamp="20230912 10:02:11.695" level="INFO">${keys_length} = 5</msg>
+<status status="PASS" starttime="20230912 10:02:11.695" endtime="20230912 10:02:11.695"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_userdata_length}</arg>
 <arg>${keys_length}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:18.769" endtime="20230911 20:54:18.770"/>
+<status status="PASS" starttime="20230912 10:02:11.695" endtime="20230912 10:02:11.695"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
@@ -575,9 +575,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.770" endtime="20230911 20:54:18.770"/>
+<status status="PASS" starttime="20230912 10:02:11.695" endtime="20230912 10:02:11.696"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.770" endtime="20230911 20:54:18.770"/>
+<status status="PASS" starttime="20230912 10:02:11.695" endtime="20230912 10:02:11.696"/>
 </iter>
 <iter>
 <var name="${i}">gender</var>
@@ -585,9 +585,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.770" endtime="20230911 20:54:18.771"/>
+<status status="PASS" starttime="20230912 10:02:11.696" endtime="20230912 10:02:11.696"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.770" endtime="20230911 20:54:18.771"/>
+<status status="PASS" starttime="20230912 10:02:11.696" endtime="20230912 10:02:11.696"/>
 </iter>
 <iter>
 <var name="${i}">id</var>
@@ -595,9 +595,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.771" endtime="20230911 20:54:18.771"/>
+<status status="PASS" starttime="20230912 10:02:11.696" endtime="20230912 10:02:11.696"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.771" endtime="20230911 20:54:18.771"/>
+<status status="PASS" starttime="20230912 10:02:11.696" endtime="20230912 10:02:11.696"/>
 </iter>
 <iter>
 <var name="${i}">name</var>
@@ -605,9 +605,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.771" endtime="20230911 20:54:18.771"/>
+<status status="PASS" starttime="20230912 10:02:11.696" endtime="20230912 10:02:11.696"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.771" endtime="20230911 20:54:18.771"/>
+<status status="PASS" starttime="20230912 10:02:11.696" endtime="20230912 10:02:11.697"/>
 </iter>
 <iter>
 <var name="${i}">status</var>
@@ -615,13 +615,13 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.771" endtime="20230911 20:54:18.771"/>
+<status status="PASS" starttime="20230912 10:02:11.697" endtime="20230912 10:02:11.697"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.771" endtime="20230911 20:54:18.772"/>
+<status status="PASS" starttime="20230912 10:02:11.697" endtime="20230912 10:02:11.697"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.770" endtime="20230911 20:54:18.772"/>
+<status status="PASS" starttime="20230912 10:02:11.695" endtime="20230912 10:02:11.697"/>
 </for>
-<status status="PASS" starttime="20230911 20:54:18.768" endtime="20230911 20:54:18.772"/>
+<status status="PASS" starttime="20230912 10:02:11.694" endtime="20230912 10:02:11.697"/>
 </iter>
 <iter>
 <var name="${index}">4</var>
@@ -629,22 +629,22 @@
 <var>${keys}</var>
 <arg>${data[${index}]}</arg>
 <doc>Returns keys of the given ``dictionary`` as a list.</doc>
-<msg timestamp="20230911 20:54:18.772" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
-<status status="PASS" starttime="20230911 20:54:18.772" endtime="20230911 20:54:18.772"/>
+<msg timestamp="20230912 10:02:11.698" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
+<status status="PASS" starttime="20230912 10:02:11.697" endtime="20230912 10:02:11.698"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${keys_length}</var>
 <arg>${keys}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.772" level="INFO">Length is 5</msg>
-<msg timestamp="20230911 20:54:18.773" level="INFO">${keys_length} = 5</msg>
-<status status="PASS" starttime="20230911 20:54:18.772" endtime="20230911 20:54:18.773"/>
+<msg timestamp="20230912 10:02:11.699" level="INFO">Length is 5</msg>
+<msg timestamp="20230912 10:02:11.699" level="INFO">${keys_length} = 5</msg>
+<status status="PASS" starttime="20230912 10:02:11.698" endtime="20230912 10:02:11.699"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_userdata_length}</arg>
 <arg>${keys_length}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:18.773" endtime="20230911 20:54:18.773"/>
+<status status="PASS" starttime="20230912 10:02:11.699" endtime="20230912 10:02:11.699"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
@@ -655,9 +655,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.773" endtime="20230911 20:54:18.773"/>
+<status status="PASS" starttime="20230912 10:02:11.700" endtime="20230912 10:02:11.700"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.773" endtime="20230911 20:54:18.773"/>
+<status status="PASS" starttime="20230912 10:02:11.699" endtime="20230912 10:02:11.700"/>
 </iter>
 <iter>
 <var name="${i}">gender</var>
@@ -665,9 +665,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.773" endtime="20230911 20:54:18.774"/>
+<status status="PASS" starttime="20230912 10:02:11.700" endtime="20230912 10:02:11.700"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.773" endtime="20230911 20:54:18.774"/>
+<status status="PASS" starttime="20230912 10:02:11.700" endtime="20230912 10:02:11.700"/>
 </iter>
 <iter>
 <var name="${i}">id</var>
@@ -675,9 +675,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.774" endtime="20230911 20:54:18.774"/>
+<status status="PASS" starttime="20230912 10:02:11.700" endtime="20230912 10:02:11.700"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.774" endtime="20230911 20:54:18.774"/>
+<status status="PASS" starttime="20230912 10:02:11.700" endtime="20230912 10:02:11.701"/>
 </iter>
 <iter>
 <var name="${i}">name</var>
@@ -685,9 +685,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.774" endtime="20230911 20:54:18.774"/>
+<status status="PASS" starttime="20230912 10:02:11.701" endtime="20230912 10:02:11.701"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.774" endtime="20230911 20:54:18.774"/>
+<status status="PASS" starttime="20230912 10:02:11.701" endtime="20230912 10:02:11.701"/>
 </iter>
 <iter>
 <var name="${i}">status</var>
@@ -695,13 +695,13 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.774" endtime="20230911 20:54:18.775"/>
+<status status="PASS" starttime="20230912 10:02:11.701" endtime="20230912 10:02:11.701"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.774" endtime="20230911 20:54:18.775"/>
+<status status="PASS" starttime="20230912 10:02:11.701" endtime="20230912 10:02:11.701"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.773" endtime="20230911 20:54:18.775"/>
+<status status="PASS" starttime="20230912 10:02:11.699" endtime="20230912 10:02:11.701"/>
 </for>
-<status status="PASS" starttime="20230911 20:54:18.772" endtime="20230911 20:54:18.775"/>
+<status status="PASS" starttime="20230912 10:02:11.697" endtime="20230912 10:02:11.701"/>
 </iter>
 <iter>
 <var name="${index}">5</var>
@@ -709,22 +709,22 @@
 <var>${keys}</var>
 <arg>${data[${index}]}</arg>
 <doc>Returns keys of the given ``dictionary`` as a list.</doc>
-<msg timestamp="20230911 20:54:18.775" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
-<status status="PASS" starttime="20230911 20:54:18.775" endtime="20230911 20:54:18.775"/>
+<msg timestamp="20230912 10:02:11.702" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
+<status status="PASS" starttime="20230912 10:02:11.701" endtime="20230912 10:02:11.702"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${keys_length}</var>
 <arg>${keys}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.776" level="INFO">Length is 5</msg>
-<msg timestamp="20230911 20:54:18.776" level="INFO">${keys_length} = 5</msg>
-<status status="PASS" starttime="20230911 20:54:18.775" endtime="20230911 20:54:18.776"/>
+<msg timestamp="20230912 10:02:11.702" level="INFO">Length is 5</msg>
+<msg timestamp="20230912 10:02:11.702" level="INFO">${keys_length} = 5</msg>
+<status status="PASS" starttime="20230912 10:02:11.702" endtime="20230912 10:02:11.702"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_userdata_length}</arg>
 <arg>${keys_length}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:18.776" endtime="20230911 20:54:18.776"/>
+<status status="PASS" starttime="20230912 10:02:11.702" endtime="20230912 10:02:11.703"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
@@ -735,9 +735,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.776" endtime="20230911 20:54:18.776"/>
+<status status="PASS" starttime="20230912 10:02:11.703" endtime="20230912 10:02:11.703"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.776" endtime="20230911 20:54:18.776"/>
+<status status="PASS" starttime="20230912 10:02:11.703" endtime="20230912 10:02:11.703"/>
 </iter>
 <iter>
 <var name="${i}">gender</var>
@@ -745,9 +745,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.777" endtime="20230911 20:54:18.777"/>
+<status status="PASS" starttime="20230912 10:02:11.703" endtime="20230912 10:02:11.704"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.776" endtime="20230911 20:54:18.777"/>
+<status status="PASS" starttime="20230912 10:02:11.703" endtime="20230912 10:02:11.704"/>
 </iter>
 <iter>
 <var name="${i}">id</var>
@@ -755,9 +755,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.777" endtime="20230911 20:54:18.777"/>
+<status status="PASS" starttime="20230912 10:02:11.704" endtime="20230912 10:02:11.704"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.777" endtime="20230911 20:54:18.777"/>
+<status status="PASS" starttime="20230912 10:02:11.704" endtime="20230912 10:02:11.704"/>
 </iter>
 <iter>
 <var name="${i}">name</var>
@@ -765,9 +765,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.777" endtime="20230911 20:54:18.777"/>
+<status status="PASS" starttime="20230912 10:02:11.704" endtime="20230912 10:02:11.704"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.777" endtime="20230911 20:54:18.777"/>
+<status status="PASS" starttime="20230912 10:02:11.704" endtime="20230912 10:02:11.704"/>
 </iter>
 <iter>
 <var name="${i}">status</var>
@@ -775,13 +775,13 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.778" endtime="20230911 20:54:18.778"/>
+<status status="PASS" starttime="20230912 10:02:11.704" endtime="20230912 10:02:11.704"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.777" endtime="20230911 20:54:18.778"/>
+<status status="PASS" starttime="20230912 10:02:11.704" endtime="20230912 10:02:11.705"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.776" endtime="20230911 20:54:18.778"/>
+<status status="PASS" starttime="20230912 10:02:11.703" endtime="20230912 10:02:11.705"/>
 </for>
-<status status="PASS" starttime="20230911 20:54:18.775" endtime="20230911 20:54:18.778"/>
+<status status="PASS" starttime="20230912 10:02:11.701" endtime="20230912 10:02:11.705"/>
 </iter>
 <iter>
 <var name="${index}">6</var>
@@ -789,22 +789,22 @@
 <var>${keys}</var>
 <arg>${data[${index}]}</arg>
 <doc>Returns keys of the given ``dictionary`` as a list.</doc>
-<msg timestamp="20230911 20:54:18.778" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
-<status status="PASS" starttime="20230911 20:54:18.778" endtime="20230911 20:54:18.779"/>
+<msg timestamp="20230912 10:02:11.705" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
+<status status="PASS" starttime="20230912 10:02:11.705" endtime="20230912 10:02:11.705"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${keys_length}</var>
 <arg>${keys}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.779" level="INFO">Length is 5</msg>
-<msg timestamp="20230911 20:54:18.779" level="INFO">${keys_length} = 5</msg>
-<status status="PASS" starttime="20230911 20:54:18.779" endtime="20230911 20:54:18.779"/>
+<msg timestamp="20230912 10:02:11.706" level="INFO">Length is 5</msg>
+<msg timestamp="20230912 10:02:11.706" level="INFO">${keys_length} = 5</msg>
+<status status="PASS" starttime="20230912 10:02:11.705" endtime="20230912 10:02:11.706"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_userdata_length}</arg>
 <arg>${keys_length}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:18.779" endtime="20230911 20:54:18.779"/>
+<status status="PASS" starttime="20230912 10:02:11.706" endtime="20230912 10:02:11.706"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
@@ -815,9 +815,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.779" endtime="20230911 20:54:18.779"/>
+<status status="PASS" starttime="20230912 10:02:11.706" endtime="20230912 10:02:11.706"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.779" endtime="20230911 20:54:18.779"/>
+<status status="PASS" starttime="20230912 10:02:11.706" endtime="20230912 10:02:11.706"/>
 </iter>
 <iter>
 <var name="${i}">gender</var>
@@ -825,9 +825,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.780" endtime="20230911 20:54:18.780"/>
+<status status="PASS" starttime="20230912 10:02:11.707" endtime="20230912 10:02:11.707"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.780" endtime="20230911 20:54:18.780"/>
+<status status="PASS" starttime="20230912 10:02:11.706" endtime="20230912 10:02:11.707"/>
 </iter>
 <iter>
 <var name="${i}">id</var>
@@ -835,9 +835,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.780" endtime="20230911 20:54:18.780"/>
+<status status="PASS" starttime="20230912 10:02:11.707" endtime="20230912 10:02:11.707"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.780" endtime="20230911 20:54:18.780"/>
+<status status="PASS" starttime="20230912 10:02:11.707" endtime="20230912 10:02:11.707"/>
 </iter>
 <iter>
 <var name="${i}">name</var>
@@ -845,9 +845,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.780" endtime="20230911 20:54:18.780"/>
+<status status="PASS" starttime="20230912 10:02:11.707" endtime="20230912 10:02:11.707"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.780" endtime="20230911 20:54:18.780"/>
+<status status="PASS" starttime="20230912 10:02:11.707" endtime="20230912 10:02:11.707"/>
 </iter>
 <iter>
 <var name="${i}">status</var>
@@ -855,13 +855,13 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.781" endtime="20230911 20:54:18.781"/>
+<status status="PASS" starttime="20230912 10:02:11.708" endtime="20230912 10:02:11.708"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.780" endtime="20230911 20:54:18.781"/>
+<status status="PASS" starttime="20230912 10:02:11.707" endtime="20230912 10:02:11.708"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.779" endtime="20230911 20:54:18.781"/>
+<status status="PASS" starttime="20230912 10:02:11.706" endtime="20230912 10:02:11.708"/>
 </for>
-<status status="PASS" starttime="20230911 20:54:18.778" endtime="20230911 20:54:18.781"/>
+<status status="PASS" starttime="20230912 10:02:11.705" endtime="20230912 10:02:11.708"/>
 </iter>
 <iter>
 <var name="${index}">7</var>
@@ -869,22 +869,22 @@
 <var>${keys}</var>
 <arg>${data[${index}]}</arg>
 <doc>Returns keys of the given ``dictionary`` as a list.</doc>
-<msg timestamp="20230911 20:54:18.781" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
-<status status="PASS" starttime="20230911 20:54:18.781" endtime="20230911 20:54:18.781"/>
+<msg timestamp="20230912 10:02:11.709" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
+<status status="PASS" starttime="20230912 10:02:11.708" endtime="20230912 10:02:11.709"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${keys_length}</var>
 <arg>${keys}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.782" level="INFO">Length is 5</msg>
-<msg timestamp="20230911 20:54:18.782" level="INFO">${keys_length} = 5</msg>
-<status status="PASS" starttime="20230911 20:54:18.782" endtime="20230911 20:54:18.782"/>
+<msg timestamp="20230912 10:02:11.709" level="INFO">Length is 5</msg>
+<msg timestamp="20230912 10:02:11.709" level="INFO">${keys_length} = 5</msg>
+<status status="PASS" starttime="20230912 10:02:11.709" endtime="20230912 10:02:11.709"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_userdata_length}</arg>
 <arg>${keys_length}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:18.782" endtime="20230911 20:54:18.782"/>
+<status status="PASS" starttime="20230912 10:02:11.709" endtime="20230912 10:02:11.709"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
@@ -895,9 +895,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.782" endtime="20230911 20:54:18.782"/>
+<status status="PASS" starttime="20230912 10:02:11.709" endtime="20230912 10:02:11.710"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.782" endtime="20230911 20:54:18.782"/>
+<status status="PASS" starttime="20230912 10:02:11.709" endtime="20230912 10:02:11.710"/>
 </iter>
 <iter>
 <var name="${i}">gender</var>
@@ -905,9 +905,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.783" endtime="20230911 20:54:18.783"/>
+<status status="PASS" starttime="20230912 10:02:11.710" endtime="20230912 10:02:11.710"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.783" endtime="20230911 20:54:18.783"/>
+<status status="PASS" starttime="20230912 10:02:11.710" endtime="20230912 10:02:11.710"/>
 </iter>
 <iter>
 <var name="${i}">id</var>
@@ -915,9 +915,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.783" endtime="20230911 20:54:18.783"/>
+<status status="PASS" starttime="20230912 10:02:11.710" endtime="20230912 10:02:11.710"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.783" endtime="20230911 20:54:18.783"/>
+<status status="PASS" starttime="20230912 10:02:11.710" endtime="20230912 10:02:11.710"/>
 </iter>
 <iter>
 <var name="${i}">name</var>
@@ -925,9 +925,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.783" endtime="20230911 20:54:18.783"/>
+<status status="PASS" starttime="20230912 10:02:11.710" endtime="20230912 10:02:11.711"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.783" endtime="20230911 20:54:18.783"/>
+<status status="PASS" starttime="20230912 10:02:11.710" endtime="20230912 10:02:11.711"/>
 </iter>
 <iter>
 <var name="${i}">status</var>
@@ -935,13 +935,13 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.784" endtime="20230911 20:54:18.784"/>
+<status status="PASS" starttime="20230912 10:02:11.711" endtime="20230912 10:02:11.711"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.784" endtime="20230911 20:54:18.784"/>
+<status status="PASS" starttime="20230912 10:02:11.711" endtime="20230912 10:02:11.711"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.782" endtime="20230911 20:54:18.784"/>
+<status status="PASS" starttime="20230912 10:02:11.709" endtime="20230912 10:02:11.711"/>
 </for>
-<status status="PASS" starttime="20230911 20:54:18.781" endtime="20230911 20:54:18.784"/>
+<status status="PASS" starttime="20230912 10:02:11.708" endtime="20230912 10:02:11.711"/>
 </iter>
 <iter>
 <var name="${index}">8</var>
@@ -949,22 +949,22 @@
 <var>${keys}</var>
 <arg>${data[${index}]}</arg>
 <doc>Returns keys of the given ``dictionary`` as a list.</doc>
-<msg timestamp="20230911 20:54:18.785" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
-<status status="PASS" starttime="20230911 20:54:18.784" endtime="20230911 20:54:18.785"/>
+<msg timestamp="20230912 10:02:11.712" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
+<status status="PASS" starttime="20230912 10:02:11.711" endtime="20230912 10:02:11.712"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${keys_length}</var>
 <arg>${keys}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.785" level="INFO">Length is 5</msg>
-<msg timestamp="20230911 20:54:18.785" level="INFO">${keys_length} = 5</msg>
-<status status="PASS" starttime="20230911 20:54:18.785" endtime="20230911 20:54:18.785"/>
+<msg timestamp="20230912 10:02:11.712" level="INFO">Length is 5</msg>
+<msg timestamp="20230912 10:02:11.712" level="INFO">${keys_length} = 5</msg>
+<status status="PASS" starttime="20230912 10:02:11.712" endtime="20230912 10:02:11.712"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_userdata_length}</arg>
 <arg>${keys_length}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:18.785" endtime="20230911 20:54:18.785"/>
+<status status="PASS" starttime="20230912 10:02:11.712" endtime="20230912 10:02:11.712"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
@@ -975,9 +975,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.786" endtime="20230911 20:54:18.786"/>
+<status status="PASS" starttime="20230912 10:02:11.713" endtime="20230912 10:02:11.713"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.785" endtime="20230911 20:54:18.786"/>
+<status status="PASS" starttime="20230912 10:02:11.713" endtime="20230912 10:02:11.713"/>
 </iter>
 <iter>
 <var name="${i}">gender</var>
@@ -985,9 +985,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.786" endtime="20230911 20:54:18.786"/>
+<status status="PASS" starttime="20230912 10:02:11.714" endtime="20230912 10:02:11.714"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.786" endtime="20230911 20:54:18.786"/>
+<status status="PASS" starttime="20230912 10:02:11.714" endtime="20230912 10:02:11.714"/>
 </iter>
 <iter>
 <var name="${i}">id</var>
@@ -995,9 +995,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.786" endtime="20230911 20:54:18.787"/>
+<status status="PASS" starttime="20230912 10:02:11.714" endtime="20230912 10:02:11.714"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.786" endtime="20230911 20:54:18.787"/>
+<status status="PASS" starttime="20230912 10:02:11.714" endtime="20230912 10:02:11.715"/>
 </iter>
 <iter>
 <var name="${i}">name</var>
@@ -1005,9 +1005,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.787" endtime="20230911 20:54:18.787"/>
+<status status="PASS" starttime="20230912 10:02:11.715" endtime="20230912 10:02:11.715"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.787" endtime="20230911 20:54:18.787"/>
+<status status="PASS" starttime="20230912 10:02:11.715" endtime="20230912 10:02:11.715"/>
 </iter>
 <iter>
 <var name="${i}">status</var>
@@ -1015,13 +1015,13 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.787" endtime="20230911 20:54:18.787"/>
+<status status="PASS" starttime="20230912 10:02:11.715" endtime="20230912 10:02:11.716"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.787" endtime="20230911 20:54:18.787"/>
+<status status="PASS" starttime="20230912 10:02:11.715" endtime="20230912 10:02:11.716"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.785" endtime="20230911 20:54:18.788"/>
+<status status="PASS" starttime="20230912 10:02:11.712" endtime="20230912 10:02:11.716"/>
 </for>
-<status status="PASS" starttime="20230911 20:54:18.784" endtime="20230911 20:54:18.788"/>
+<status status="PASS" starttime="20230912 10:02:11.711" endtime="20230912 10:02:11.716"/>
 </iter>
 <iter>
 <var name="${index}">9</var>
@@ -1029,22 +1029,22 @@
 <var>${keys}</var>
 <arg>${data[${index}]}</arg>
 <doc>Returns keys of the given ``dictionary`` as a list.</doc>
-<msg timestamp="20230911 20:54:18.788" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
-<status status="PASS" starttime="20230911 20:54:18.788" endtime="20230911 20:54:18.788"/>
+<msg timestamp="20230912 10:02:11.717" level="INFO">${keys} = ['email', 'gender', 'id', 'name', 'status']</msg>
+<status status="PASS" starttime="20230912 10:02:11.716" endtime="20230912 10:02:11.717"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${keys_length}</var>
 <arg>${keys}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230911 20:54:18.789" level="INFO">Length is 5</msg>
-<msg timestamp="20230911 20:54:18.789" level="INFO">${keys_length} = 5</msg>
-<status status="PASS" starttime="20230911 20:54:18.788" endtime="20230911 20:54:18.789"/>
+<msg timestamp="20230912 10:02:11.717" level="INFO">Length is 5</msg>
+<msg timestamp="20230912 10:02:11.717" level="INFO">${keys_length} = 5</msg>
+<status status="PASS" starttime="20230912 10:02:11.717" endtime="20230912 10:02:11.718"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${list_userdata_length}</arg>
 <arg>${keys_length}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:18.789" endtime="20230911 20:54:18.789"/>
+<status status="PASS" starttime="20230912 10:02:11.718" endtime="20230912 10:02:11.718"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
@@ -1055,9 +1055,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.789" endtime="20230911 20:54:18.789"/>
+<status status="PASS" starttime="20230912 10:02:11.718" endtime="20230912 10:02:11.718"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.789" endtime="20230911 20:54:18.789"/>
+<status status="PASS" starttime="20230912 10:02:11.718" endtime="20230912 10:02:11.718"/>
 </iter>
 <iter>
 <var name="${i}">gender</var>
@@ -1065,9 +1065,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.789" endtime="20230911 20:54:18.790"/>
+<status status="PASS" starttime="20230912 10:02:11.719" endtime="20230912 10:02:11.719"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.789" endtime="20230911 20:54:18.790"/>
+<status status="PASS" starttime="20230912 10:02:11.718" endtime="20230912 10:02:11.719"/>
 </iter>
 <iter>
 <var name="${i}">id</var>
@@ -1075,9 +1075,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.790" endtime="20230911 20:54:18.790"/>
+<status status="PASS" starttime="20230912 10:02:11.719" endtime="20230912 10:02:11.719"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.790" endtime="20230911 20:54:18.790"/>
+<status status="PASS" starttime="20230912 10:02:11.719" endtime="20230912 10:02:11.719"/>
 </iter>
 <iter>
 <var name="${i}">name</var>
@@ -1085,9 +1085,9 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.790" endtime="20230911 20:54:18.790"/>
+<status status="PASS" starttime="20230912 10:02:11.719" endtime="20230912 10:02:11.719"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.790" endtime="20230911 20:54:18.790"/>
+<status status="PASS" starttime="20230912 10:02:11.719" endtime="20230912 10:02:11.719"/>
 </iter>
 <iter>
 <var name="${i}">status</var>
@@ -1095,24 +1095,24 @@
 <arg>${list_userdata}</arg>
 <arg>${i}</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="PASS" starttime="20230911 20:54:18.790" endtime="20230911 20:54:18.791"/>
+<status status="PASS" starttime="20230912 10:02:11.719" endtime="20230912 10:02:11.720"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.790" endtime="20230911 20:54:18.791"/>
+<status status="PASS" starttime="20230912 10:02:11.719" endtime="20230912 10:02:11.720"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.789" endtime="20230911 20:54:18.791"/>
+<status status="PASS" starttime="20230912 10:02:11.718" endtime="20230912 10:02:11.720"/>
 </for>
-<status status="PASS" starttime="20230911 20:54:18.788" endtime="20230911 20:54:18.791"/>
+<status status="PASS" starttime="20230912 10:02:11.716" endtime="20230912 10:02:11.720"/>
 </iter>
-<status status="PASS" starttime="20230911 20:54:18.761" endtime="20230911 20:54:18.791"/>
+<status status="PASS" starttime="20230912 10:02:11.684" endtime="20230912 10:02:11.720"/>
 </for>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:18.791" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:18.791" endtime="20230911 20:54:18.792"/>
+<msg timestamp="20230912 10:02:11.720" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:11.720" endtime="20230912 10:02:11.721"/>
 </kw>
 <doc>Validate all the entries in the API response has similar attributes</doc>
 <tag>Functional</tag>
-<status status="PASS" starttime="20230911 20:54:18.473" endtime="20230911 20:54:18.792"/>
+<status status="PASS" starttime="20230912 10:02:11.361" endtime="20230912 10:02:11.721"/>
 </test>
 <test id="s1-t5" name="Verify HTTP response code when record doesn't exist" line="86">
 <kw name="Session Creation" library="resource" type="SETUP">
@@ -1122,10 +1122,10 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:18.794" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:18.793" endtime="20230911 20:54:18.794"/>
+<msg timestamp="20230912 10:02:11.723" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:11.723" endtime="20230912 10:02:11.723"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:18.793" endtime="20230911 20:54:18.794"/>
+<status status="PASS" starttime="20230912 10:02:11.722" endtime="20230912 10:02:11.723"/>
 </kw>
 <kw name="Get Request" library="resource">
 <var>${response}</var>
@@ -1140,35 +1140,35 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:19.339" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users%20/invalid_id?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:12.336" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users%20/invalid_id?Create%20Dictionary%20Content-Type=application/json 
  path_url=/public/v2/users%20/invalid_id?Create%20Dictionary%20Content-Type=application/json 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20230911 20:54:19.339" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users%20/invalid_id?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:12.337" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users%20/invalid_id?Create%20Dictionary%20Content-Type=application/json 
  status=404, reason=Not Found 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:19 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'feature-policy': "camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'", 'link': '&lt;/assets/application-b0b1470b32cd167c6044e35b59bd27802115d857f02494dd61d6e6cb6faf4cbe.css&gt;; rel=preload; as=style; nopush', 'referrer-policy': 'strict-origin-when-cross-origin', 'set-cookie': '_gorest_session=URqxVmwzafbZ%2FZO0pIWFeyKNem%2FjQsEU0F2lkxKyJDP0W2yN6IvsVu01tiG9aCvndjVBOGv7Hm1QqzzK%2B%2FxwMQNkULKMlKguH4Jj3Oh%2FPYRBqCo8P%2BJ5%2BrCNocsUK%2BpEXZY4Y%2BCpBZyNKphflC1dobOqpQ5mWBObEF21bBDil%2B1E2lqIG0E475%2F4EmN3%2F9feskEiWlWC80J8tUWnMNyG8fe8YJlu6gxRAWtgTN%2F2psrfs0ZWQlNv73MUArisGUdZPn7UJjTlYBP9t3HP84O8RZYG%2BITh%2FH4%3D--qCFBvaYtKUPda9cn--FNMs%2BfkLTrjROrzO9ATEWg%3D%3D; path=/; HttpOnly; SameSite=Lax', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'a503ef0a-d575-4f51-a079-80fb0c0c053d', 'x-runtime': '0.011430', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=DONug%2Fh9OudnoO0ovymy%2BrP%2FcWXawSZYU6FUHrVUuJMNjq2SV0FhzL4fOfwDLMZq0W9ukryEW4EHiD41HtevTLiIS91fvcB8gFjj7Nkpj%2BY3GKBuzMLJQunHyoOpwik%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eabadc2e41da-AMS', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:12 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'feature-policy': "camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'", 'link': '&lt;/assets/application-b0b1470b32cd167c6044e35b59bd27802115d857f02494dd61d6e6cb6faf4cbe.css&gt;; rel=preload; as=style; nopush', 'referrer-policy': 'strict-origin-when-cross-origin', 'set-cookie': '_gorest_session=eAe9TXRxJP%2B1RJWZ7Icdy6zKtbZT1a73m8%2BzQS2MHP16sfFMnA%2BUgAYLB3yb2j8DyLFOLnKEUjgLHelFCL28dIiJuAX99qQ6JSFgsQt9V8lhWvrT7SZgVNrlmswKG7Kb%2FFZaOyA1vRTr0W0x4ZOuKVfxZupjBOBoBRtyxPCVAYgpip%2FtWqs3ZLmSdrUyG4DUPglwL%2BJEqRvRwLpdt0LINc6OuUg0HqO2DaLgmOLZRunXPGyK86LON3wc04uruYawpXcneaQdjoYY%2BU1jT3ycJ1CBXJoBHak%3D--FjCY9cVf3e4apx0C--aNFZZZZ41qk6mnrIEwGkCA%3D%3D; path=/; HttpOnly; SameSite=Lax', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'b39a28f4-621a-45ef-8ac9-6b7e74aae75c', 'x-runtime': '0.011499', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=J8ht%2B8TY42oRnNVJSK2wwnhqn4c3B4LW48U6eHhSYGf0gJyqpkQFp0rGkV5IffDlxnhPvXrB4VNhgA%2BAoqKXXOigRzVenIfs5JGWQ%2FVqzx1%2F%2Fet5trIg4IiC4i%2B0VwU%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556cdb6ad9dd7b-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
  body=&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8" /&gt;&lt;meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /&gt;&lt;link href="/favicon.ico" rel="icon" type="image/x-icon" /&gt;&lt;title&gt;Page Not Found | GO REST&lt;/title&gt;&lt;meta name="csrf-param" content="authenticity_token" /&gt;
-&lt;meta name="csrf-token" content="NKydXcmhSMKGUPGFdF0Ex4LGswu0nZdKfsTd-ayRJ4c3ZtH26C5UMnCQDeS1ym1WNdwsrDwcahL4rJsNw_1RDA" /&gt;&lt;link rel="stylesheet" href="/assets/application-b0b1470b32cd167c6044e35b59bd27802115d857f02494dd61d6e6cb6faf4cbe.css" media="all" data-turbolinks-track="reload" /&gt;&lt;script src="/packs/js/application-e1048667d530386bf4e1.js" data-turbolinks-track="reload" defer="defer"&gt;&lt;/script&gt;&lt;script async="true" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4930099895671899"&gt;&lt;/script&gt;&lt;script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-7KR6VNWHWS"&gt;&lt;/script&gt;&lt;script&gt;window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-7KR6VNWHWS');&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"&gt;&lt;div class="container"&gt;&lt;a class="navbar-brand" href="/"&gt;&lt;i class="fas fa-exchange-alt"&gt;&lt;/i&gt; Go REST&lt;/a&gt;&lt;button aria-controls="AppNavBar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#AppNavBar" data-bs-toggle="collapse" type="button"&gt;&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;&lt;/button&gt;&lt;div class="collapse navbar-collapse" id="AppNavBar"&gt;&lt;ul class="navbar-nav ms-auto"&gt;&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/chandamama-stories"&gt;&lt;i class="fas fa-cloud-moon"&gt;&lt;/i&gt; Chandamama Stories&lt;/a&gt;&lt;/li&gt;&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/qa"&gt;&lt;i class="fas fa-life-ring"&gt;&lt;/i&gt; Help&lt;/a&gt;&lt;/li&gt;&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/rest-console"&gt;&lt;i class="fab fa-linux"&gt;&lt;/i&gt; Rest Console&lt;/a&gt;&lt;/li&gt;&lt;li class="nav-item dropdown"&gt;&lt;a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="ToolsDropDown" role="button"&gt;&lt;i class="fas fa-tools"&gt;&lt;/i&gt; Tools&lt;/a&gt;&lt;ul aria-labelledby="ToolsDropDown" class="dropdown-menu"&gt;&lt;li class&gt;&lt;a class="dropdown-item" href="/tools/base64-encode-decode"&gt;Base64 Encode/Decode&lt;/a&gt;&lt;/li&gt;&lt;li class&gt;&lt;a class="dropdown-item" href="/tools/url-encode-decode"&gt;Url Encode/Decode&lt;/a&gt;&lt;/li&gt;&lt;li class&gt;&lt;a class="dropdown-item" href="/tools/gcode-translator"&gt;G-Code Translator&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/consumer/login"&gt;Login&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class="container pt-3"&gt;&lt;style type="text/css"&gt;.code-text code {color: #bdbdbd;display: block;}.code-text code b {color: #81a2be;font-weight: 900;}.code-text code em {color: #b294bb;font-style: unset;}.code-text code i {color: #b5bd68;}.code-text code span {color: #f0c674;}&lt;/style&gt;&lt;div class="card text-white border-secondary bg-dark"&gt;&lt;div class="card-header"&gt;&lt;h1 class="card-title text-warning"&gt;&lt;i class="fas fa-ghost text-white slide-right"&gt;&lt;/i&gt; HTTP: Not Found &lt;/h1&gt;&lt;/div&gt;&lt;div class="card-body"&gt;&lt;h3 class="leaad code-text"&gt;&lt;code class="mb-3"&gt;&lt;span&gt;this_page&lt;/span&gt;.&lt;em&gt;not_found&lt;/em&gt; = true&lt;/code&gt;&lt;/h3&gt;&lt;p class="lead code-text"&gt;&lt;code class="mb-2"&gt;&lt;span&gt;if&lt;/span&gt; &lt;b&gt;you_spelt_it_wrong&lt;/b&gt; &lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;span&gt;try_again&lt;/span&gt;&lt;br/&gt;&lt;/code&gt;&lt;code class="mb-2"&gt;&lt;span&gt;elsif &lt;b&gt;we_screwed_up&lt;/b&gt;&lt;/span&gt; &lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;em&gt;print&lt;/em&gt; &lt;i&gt;"We're really sorry about that."&lt;/i&gt;&lt;br/&gt;&lt;/code&gt;&lt;code class="mb-2"&gt;&lt;span&gt;end&lt;/span&gt;&lt;/code&gt;&lt;code class="mb-2"&gt;&lt;span&gt;redirect_to&lt;/span&gt; &lt;em&gt;home_page&lt;/em&gt;&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;hr class="mt-5" /&gt;&lt;div class="container"&gt;&lt;div class="footer"&gt;&lt;ul class="list-inline"&gt;&lt;li class="list-inline-item"&gt;&amp;copy; Go Rest 2023&lt;/li&gt;&lt;li class="list-inline-item float-lg-end"&gt;&lt;a href="/privacy-policy"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;&lt;li class="list-inline-item float-lg-end me-3"&gt;&lt;a href="/contact-us"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 
+&lt;meta name="csrf-token" content="TFb4lD-2v6-olK5EJFwlbBY9uYmjuf133TMOcsbGPAqyA8e_7DSipFNavVSRIE0cSiM2PPHADw8zQdJuBrZrkg" /&gt;&lt;link rel="stylesheet" href="/assets/application-b0b1470b32cd167c6044e35b59bd27802115d857f02494dd61d6e6cb6faf4cbe.css" media="all" data-turbolinks-track="reload" /&gt;&lt;script src="/packs/js/application-e1048667d530386bf4e1.js" data-turbolinks-track="reload" defer="defer"&gt;&lt;/script&gt;&lt;script async="true" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4930099895671899"&gt;&lt;/script&gt;&lt;script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-7KR6VNWHWS"&gt;&lt;/script&gt;&lt;script&gt;window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-7KR6VNWHWS');&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"&gt;&lt;div class="container"&gt;&lt;a class="navbar-brand" href="/"&gt;&lt;i class="fas fa-exchange-alt"&gt;&lt;/i&gt; Go REST&lt;/a&gt;&lt;button aria-controls="AppNavBar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#AppNavBar" data-bs-toggle="collapse" type="button"&gt;&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;&lt;/button&gt;&lt;div class="collapse navbar-collapse" id="AppNavBar"&gt;&lt;ul class="navbar-nav ms-auto"&gt;&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/chandamama-stories"&gt;&lt;i class="fas fa-cloud-moon"&gt;&lt;/i&gt; Chandamama Stories&lt;/a&gt;&lt;/li&gt;&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/qa"&gt;&lt;i class="fas fa-life-ring"&gt;&lt;/i&gt; Help&lt;/a&gt;&lt;/li&gt;&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/rest-console"&gt;&lt;i class="fab fa-linux"&gt;&lt;/i&gt; Rest Console&lt;/a&gt;&lt;/li&gt;&lt;li class="nav-item dropdown"&gt;&lt;a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="ToolsDropDown" role="button"&gt;&lt;i class="fas fa-tools"&gt;&lt;/i&gt; Tools&lt;/a&gt;&lt;ul aria-labelledby="ToolsDropDown" class="dropdown-menu"&gt;&lt;li class&gt;&lt;a class="dropdown-item" href="/tools/base64-encode-decode"&gt;Base64 Encode/Decode&lt;/a&gt;&lt;/li&gt;&lt;li class&gt;&lt;a class="dropdown-item" href="/tools/url-encode-decode"&gt;Url Encode/Decode&lt;/a&gt;&lt;/li&gt;&lt;li class&gt;&lt;a class="dropdown-item" href="/tools/gcode-translator"&gt;G-Code Translator&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/consumer/login"&gt;Login&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class="container pt-3"&gt;&lt;style type="text/css"&gt;.code-text code {color: #bdbdbd;display: block;}.code-text code b {color: #81a2be;font-weight: 900;}.code-text code em {color: #b294bb;font-style: unset;}.code-text code i {color: #b5bd68;}.code-text code span {color: #f0c674;}&lt;/style&gt;&lt;div class="card text-white border-secondary bg-dark"&gt;&lt;div class="card-header"&gt;&lt;h1 class="card-title text-warning"&gt;&lt;i class="fas fa-ghost text-white slide-right"&gt;&lt;/i&gt; HTTP: Not Found &lt;/h1&gt;&lt;/div&gt;&lt;div class="card-body"&gt;&lt;h3 class="leaad code-text"&gt;&lt;code class="mb-3"&gt;&lt;span&gt;this_page&lt;/span&gt;.&lt;em&gt;not_found&lt;/em&gt; = true&lt;/code&gt;&lt;/h3&gt;&lt;p class="lead code-text"&gt;&lt;code class="mb-2"&gt;&lt;span&gt;if&lt;/span&gt; &lt;b&gt;you_spelt_it_wrong&lt;/b&gt; &lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;span&gt;try_again&lt;/span&gt;&lt;br/&gt;&lt;/code&gt;&lt;code class="mb-2"&gt;&lt;span&gt;elsif &lt;b&gt;we_screwed_up&lt;/b&gt;&lt;/span&gt; &lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;em&gt;print&lt;/em&gt; &lt;i&gt;"We're really sorry about that."&lt;/i&gt;&lt;br/&gt;&lt;/code&gt;&lt;code class="mb-2"&gt;&lt;span&gt;end&lt;/span&gt;&lt;/code&gt;&lt;code class="mb-2"&gt;&lt;span&gt;redirect_to&lt;/span&gt; &lt;em&gt;home_page&lt;/em&gt;&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;hr class="mt-5" /&gt;&lt;div class="container"&gt;&lt;div class="footer"&gt;&lt;ul class="list-inline"&gt;&lt;li class="list-inline-item"&gt;&amp;copy; Go Rest 2023&lt;/li&gt;&lt;li class="list-inline-item float-lg-end"&gt;&lt;a href="/privacy-policy"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;&lt;li class="list-inline-item float-lg-end me-3"&gt;&lt;a href="/contact-us"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 
  </msg>
-<msg timestamp="20230911 20:54:19.340" level="INFO">${response} = &lt;Response [404]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:18.795" endtime="20230911 20:54:19.340"/>
+<msg timestamp="20230912 10:02:12.337" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:11.724" endtime="20230912 10:02:12.337"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" starttime="20230911 20:54:19.340" endtime="20230911 20:54:19.340"/>
+<status status="PASS" starttime="20230912 10:02:12.337" endtime="20230912 10:02:12.337"/>
 </return>
-<msg timestamp="20230911 20:54:19.340" level="INFO">${response} = &lt;Response [404]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:18.794" endtime="20230911 20:54:19.340"/>
+<msg timestamp="20230912 10:02:12.338" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:11.724" endtime="20230912 10:02:12.338"/>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:19.341" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:19.341" endtime="20230911 20:54:19.341"/>
+<msg timestamp="20230912 10:02:12.338" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:12.338" endtime="20230912 10:02:12.338"/>
 </kw>
 <doc>validate 404 HTTP response code on performing GET with invalid Id</doc>
 <tag>NonFunctional</tag>
-<status status="PASS" starttime="20230911 20:54:18.793" endtime="20230911 20:54:19.341"/>
+<status status="PASS" starttime="20230912 10:02:11.722" endtime="20230912 10:02:12.339"/>
 </test>
 <test id="s1-t6" name="Verify Get without Authentication" line="91">
 <kw name="Session Creation" library="resource" type="SETUP">
@@ -1178,10 +1178,10 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:19.344" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:19.343" endtime="20230911 20:54:19.344"/>
+<msg timestamp="20230912 10:02:12.341" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:12.340" endtime="20230912 10:02:12.341"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:19.343" endtime="20230911 20:54:19.344"/>
+<status status="PASS" starttime="20230912 10:02:12.340" endtime="20230912 10:02:12.341"/>
 </kw>
 <kw name="Get Request" library="resource">
 <var>${response}</var>
@@ -1195,34 +1195,34 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:20.038" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:12.992" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  path_url=/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20230911 20:54:20.038" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:12.993" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  status=200, reason=OK 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:20 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"849234b1e0c8002aa8b875468353c910"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '280', 'x-pagination-total': '2798', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '86c44f13-5344-475c-b108-3823ebad3d3f', 'x-runtime': '0.024088', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=VFg3pAkrrSzB11k63YJhgQ2QHjwQ%2BDOIsfEE0Vf%2BdGdlQ7hEZ%2FhpPt1GPfrX6Dne39WKWhCpARj9eceo8N0VzhS%2F6QE%2FYe8%2BxF5E6xCyV5jFSMZ7wRf1glzclw4R6c0%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eabe4a363858-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
- body=[{"id":5104299,"name":"Manjusha Namboothiri","email":"namboothiri_manjusha@kulas.test","gender":"male","status":"inactive"},{"id":5104295,"name":"Harita Mahajan","email":"mahajan_harita@emmerich.test","gender":"female","status":"inactive"},{"id":5104293,"name":"Bheeshma Pilla","email":"bheeshma_pilla@schinner-ernser.example","gender":"female","status":"inactive"},{"id":5104292,"name":"Omana Embranthiri","email":"omana_embranthiri@hane-gorczany.example","gender":"male","status":"inactive"},{"id":5104291,"name":"Rev. Kamlesh Acharya","email":"kamlesh_rev_acharya@powlowski.test","gender":"female","status":"active"},{"id":5104290,"name":"Dhara Gandhi","email":"gandhi_dhara@boyer.example","gender":"female","status":"active"},{"id":5104289,"name":"Deeptiman Iyer CPA","email":"deeptiman_iyer_cpa@kemmer.test","gender":"female","status":"inactive"},{"id":5104288,"name":"Saroja Khanna","email":"saroja_khanna@lind-robel.example","gender":"male","status":"active"},{"id":5104287,"name":"Bishnu Mehrotra","email":"bishnu_mehrotra@feeney-will.example","gender":"female","status":"active"},{"id":5104286,"name":"Sen. Meena Kakkar","email":"meena_kakkar_sen@simonis-mraz.example","gender":"female","status":"inactive"}] 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:13 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"03098440efc592921b4abb6c35667f0c"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '299', 'x-pagination-total': '2983', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'eaeebc22-3852-4970-ab8c-6a56b22aa31e', 'x-runtime': '0.023180', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=H5KDSWHU3%2FAcGRWu%2BQeAuVj%2Fs3CIzS8HkMZRSfDExVFeFe7moPlvXe2GG28qwg6vY8XNWbEkBQ5rOpZTgLhiAPQTNJaQvLwcBsnZq2Csz0mRV6BiDznGjYh1aWNV114%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556cdf49aa499a-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":5143813,"name":"Jagmeet Jha","email":"jagmeet_jha@jast-boehm.test","gender":"female","status":"inactive"},{"id":5143812,"name":"Chandini Guneta","email":"chandini_guneta@schumm.test","gender":"female","status":"active"},{"id":5143811,"name":"Bhoj Naik","email":"bhoj_naik@wuckert.example","gender":"male","status":"inactive"},{"id":5143810,"name":"Ms. Gorakhanatha Kocchar","email":"ms_gorakhanatha_kocchar@volkman-hammes.example","gender":"male","status":"active"},{"id":5143809,"name":"Aatreya Pilla","email":"aatreya_pilla@bogisich.example","gender":"male","status":"inactive"},{"id":5143808,"name":"Saraswati Kaur","email":"saraswati_kaur@welch.test","gender":"male","status":"active"},{"id":5143807,"name":"Kalyani Acharya","email":"acharya_kalyani@stehr.test","gender":"female","status":"inactive"},{"id":5143806,"name":"Dayaananda Ganaka","email":"dayaananda_ganaka@deckow.example","gender":"male","status":"inactive"},{"id":5143804,"name":"Minakshi Dwivedi","email":"minakshi_dwivedi@damore.test","gender":"female","status":"inactive"},{"id":5143803,"name":"Chetanaanand Saini","email":"saini_chetanaanand@macejkovic.example","gender":"female","status":"active"}] 
  </msg>
-<msg timestamp="20230911 20:54:20.040" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:19.345" endtime="20230911 20:54:20.040"/>
+<msg timestamp="20230912 10:02:12.994" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:12.342" endtime="20230912 10:02:12.994"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" starttime="20230911 20:54:20.040" endtime="20230911 20:54:20.040"/>
+<status status="PASS" starttime="20230912 10:02:12.994" endtime="20230912 10:02:12.994"/>
 </return>
-<msg timestamp="20230911 20:54:20.041" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:19.344" endtime="20230911 20:54:20.041"/>
+<msg timestamp="20230912 10:02:12.995" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:12.341" endtime="20230912 10:02:12.995"/>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:20.041" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:20.041" endtime="20230911 20:54:20.041"/>
+<msg timestamp="20230912 10:02:12.995" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:12.995" endtime="20230912 10:02:12.995"/>
 </kw>
 <doc>Perform Get without providing the Bearer token in the query parameter and validate the response</doc>
 <tag>NonFunctional</tag>
-<status status="PASS" starttime="20230911 20:54:19.343" endtime="20230911 20:54:20.042"/>
+<status status="PASS" starttime="20230912 10:02:12.339" endtime="20230912 10:02:12.996"/>
 </test>
 <test id="s1-t7" name="Verify Post without Authentication" line="96">
 <kw name="Session Creation" library="resource" type="SETUP">
@@ -1232,10 +1232,10 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:20.044" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:20.044" endtime="20230911 20:54:20.044"/>
+<msg timestamp="20230912 10:02:12.997" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:12.997" endtime="20230912 10:02:12.998"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:20.043" endtime="20230911 20:54:20.044"/>
+<status status="PASS" starttime="20230912 10:02:12.997" endtime="20230912 10:02:12.998"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>&amp;{data}</var>
@@ -1243,8 +1243,8 @@
 <arg>email="test@gmail.com"</arg>
 <arg>gender="male"</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230911 20:54:20.045" level="INFO">&amp;{data} = { name="test" | email="test@gmail.com" | gender="male" }</msg>
-<status status="PASS" starttime="20230911 20:54:20.045" endtime="20230911 20:54:20.045"/>
+<msg timestamp="20230912 10:02:12.999" level="INFO">&amp;{data} = { name="test" | email="test@gmail.com" | gender="male" }</msg>
+<status status="PASS" starttime="20230912 10:02:12.998" endtime="20230912 10:02:12.999"/>
 </kw>
 <kw name="Post Request" library="resource">
 <var>${response}</var>
@@ -1260,47 +1260,47 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:20.672" level="INFO">POST Request : url=https://gorest.co.in/public/v2/users 
+<msg timestamp="20230912 10:02:13.277" level="INFO">POST Request : url=https://gorest.co.in/public/v2/users 
  path_url=/public/v2/users 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '62', 'Content-Type': 'application/x-www-form-urlencoded'} 
  body=name=%22test%22&amp;email=%22test%40gmail.com%22&amp;gender=%22male%22 
  </msg>
-<msg timestamp="20230911 20:54:20.672" level="INFO">POST Response : url=https://gorest.co.in/public/v2/users 
+<msg timestamp="20230912 10:02:13.277" level="INFO">POST Response : url=https://gorest.co.in/public/v2/users 
  status=401, reason=Unauthorized 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:20 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '1aea0cda-091c-419f-b692-088e2d6ccf0d', 'x-runtime': '0.005306', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=m7%2B4WT0SZcifLkjvxGvGM8GiFFd9J7JiWkVagW5QE0ew5wcAOTqHo3QEaC%2FK%2BU5E%2F%2F2ElqUFtqGWNKyNGgmW%2F%2F4iho3WQi26teSvMfbh3yFeXNxFAunHUcBeM04PDEw%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eac298e071c0-LHR', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:13 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'eb5d2f5a-0ba8-4b80-b4d6-c2bb07ec7695', 'x-runtime': '0.005530', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=OOGz98NQG%2Br8M9iJbRF%2F7vL7DAS2RibmW5k9GHFrDRg9FCqNwVqw3XJUdhOrTFpErm6BT4T4ZlvLRZs5lqI893Ag28PZkMFYxcE47LfYp2ehbBEIAdycHAAiO%2BabVB4%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556ce36ef823b1-LHR', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={"message":"Authentication failed"} 
  </msg>
-<msg timestamp="20230911 20:54:20.672" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:20.046" endtime="20230911 20:54:20.672"/>
+<msg timestamp="20230912 10:02:13.277" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:13.000" endtime="20230912 10:02:13.277"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" starttime="20230911 20:54:20.672" endtime="20230911 20:54:20.672"/>
+<status status="PASS" starttime="20230912 10:02:13.277" endtime="20230912 10:02:13.278"/>
 </return>
-<msg timestamp="20230911 20:54:20.672" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:20.045" endtime="20230911 20:54:20.672"/>
+<msg timestamp="20230912 10:02:13.278" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:12.999" endtime="20230912 10:02:13.278"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <var>${response_str}</var>
 <arg>${response.content}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20230911 20:54:20.674" level="INFO">${response_str} = {"message":"Authentication failed"}</msg>
-<status status="PASS" starttime="20230911 20:54:20.673" endtime="20230911 20:54:20.674"/>
+<msg timestamp="20230912 10:02:13.279" level="INFO">${response_str} = {"message":"Authentication failed"}</msg>
+<status status="PASS" starttime="20230912 10:02:13.278" endtime="20230912 10:02:13.279"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${response_str}</arg>
 <arg>{"message":"Authentication failed"}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:20.674" endtime="20230911 20:54:20.674"/>
+<status status="PASS" starttime="20230912 10:02:13.280" endtime="20230912 10:02:13.280"/>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:20.675" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:20.675" endtime="20230911 20:54:20.675"/>
+<msg timestamp="20230912 10:02:13.281" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:13.281" endtime="20230912 10:02:13.281"/>
 </kw>
 <doc>Perform Get without providing the Bearer token in the header and validate the response</doc>
 <tag>NonFunctional</tag>
-<status status="PASS" starttime="20230911 20:54:20.042" endtime="20230911 20:54:20.675"/>
+<status status="PASS" starttime="20230912 10:02:12.996" endtime="20230912 10:02:13.281"/>
 </test>
 <test id="s1-t8" name="Verify Post with invalid token" line="106">
 <kw name="Session Creation" library="resource" type="SETUP">
@@ -1310,10 +1310,10 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:20.677" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:20.676" endtime="20230911 20:54:20.677"/>
+<msg timestamp="20230912 10:02:13.283" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:13.283" endtime="20230912 10:02:13.283"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:20.676" endtime="20230911 20:54:20.677"/>
+<status status="PASS" starttime="20230912 10:02:13.283" endtime="20230912 10:02:13.283"/>
 </kw>
 <kw name="Get Input" library="resource">
 <var>${invalidtoken}</var>
@@ -1323,23 +1323,23 @@
 <var>${json-data}</var>
 <arg>./InputData/input.json</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20230911 20:54:20.679" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input':...</msg>
-<status status="PASS" starttime="20230911 20:54:20.677" endtime="20230911 20:54:20.679"/>
+<msg timestamp="20230912 10:02:13.285" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input'...</msg>
+<status status="PASS" starttime="20230912 10:02:13.284" endtime="20230912 10:02:13.285"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${data}</var>
 <arg>${json-data}</arg>
 <arg>${input}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20230911 20:54:20.679" level="INFO">${data} = 16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3</msg>
-<status status="PASS" starttime="20230911 20:54:20.679" endtime="20230911 20:54:20.679"/>
+<msg timestamp="20230912 10:02:13.285" level="INFO">${data} = 16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3</msg>
+<status status="PASS" starttime="20230912 10:02:13.285" endtime="20230912 10:02:13.285"/>
 </kw>
 <return>
 <value>${data}</value>
-<status status="PASS" starttime="20230911 20:54:20.680" endtime="20230911 20:54:20.680"/>
+<status status="PASS" starttime="20230912 10:02:13.285" endtime="20230912 10:02:13.285"/>
 </return>
-<msg timestamp="20230911 20:54:20.680" level="INFO">${invalidtoken} = 16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3</msg>
-<status status="PASS" starttime="20230911 20:54:20.677" endtime="20230911 20:54:20.680"/>
+<msg timestamp="20230912 10:02:13.285" level="INFO">${invalidtoken} = 16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3</msg>
+<status status="PASS" starttime="20230912 10:02:13.284" endtime="20230912 10:02:13.285"/>
 </kw>
 <kw name="Get Input" library="resource">
 <var>${data}</var>
@@ -1349,23 +1349,23 @@
 <var>${json-data}</var>
 <arg>./InputData/input.json</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20230911 20:54:20.681" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input':...</msg>
-<status status="PASS" starttime="20230911 20:54:20.680" endtime="20230911 20:54:20.681"/>
+<msg timestamp="20230912 10:02:13.287" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input'...</msg>
+<status status="PASS" starttime="20230912 10:02:13.286" endtime="20230912 10:02:13.287"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${data}</var>
 <arg>${json-data}</arg>
 <arg>${input}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20230911 20:54:20.681" level="INFO">${data} = {'name': '3. Chinmayananda Kocchar', 'email': 'kocch_msgr_chinmaynanda@schowalter.test', 'gender': 'female', 'status': 'active'}</msg>
-<status status="PASS" starttime="20230911 20:54:20.681" endtime="20230911 20:54:20.681"/>
+<msg timestamp="20230912 10:02:13.287" level="INFO">${data} = {'name': '5. Chinmayananda Kocchar', 'email': 'koch_msgr_chinmaynanda@schowalter.test', 'gender': 'female', 'status': 'active'}</msg>
+<status status="PASS" starttime="20230912 10:02:13.287" endtime="20230912 10:02:13.287"/>
 </kw>
 <return>
 <value>${data}</value>
-<status status="PASS" starttime="20230911 20:54:20.681" endtime="20230911 20:54:20.681"/>
+<status status="PASS" starttime="20230912 10:02:13.287" endtime="20230912 10:02:13.287"/>
 </return>
-<msg timestamp="20230911 20:54:20.681" level="INFO">${data} = {'name': '3. Chinmayananda Kocchar', 'email': 'kocch_msgr_chinmaynanda@schowalter.test', 'gender': 'female', 'status': 'active'}</msg>
-<status status="PASS" starttime="20230911 20:54:20.680" endtime="20230911 20:54:20.682"/>
+<msg timestamp="20230912 10:02:13.287" level="INFO">${data} = {'name': '5. Chinmayananda Kocchar', 'email': 'koch_msgr_chinmaynanda@schowalter.test', 'gender': 'female', 'status': 'active'}</msg>
+<status status="PASS" starttime="20230912 10:02:13.286" endtime="20230912 10:02:13.287"/>
 </kw>
 <kw name="Post Request" library="resource">
 <var>${response}</var>
@@ -1381,47 +1381,47 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:21.208" level="INFO">POST Request : url=https://gorest.co.in/public/v2/users?access-token=16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3 
+<msg timestamp="20230912 10:02:13.938" level="INFO">POST Request : url=https://gorest.co.in/public/v2/users?access-token=16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3 
  path_url=/public/v2/users?access-token=16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '105', 'Content-Type': 'application/x-www-form-urlencoded'} 
- body=name=3.+Chinmayananda+Kocchar&amp;email=kocch_msgr_chinmaynanda%40schowalter.test&amp;gender=female&amp;status=active 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '104', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=name=5.+Chinmayananda+Kocchar&amp;email=koch_msgr_chinmaynanda%40schowalter.test&amp;gender=female&amp;status=active 
  </msg>
-<msg timestamp="20230911 20:54:21.208" level="INFO">POST Response : url=https://gorest.co.in/public/v2/users?access-token=16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3 
+<msg timestamp="20230912 10:02:13.939" level="INFO">POST Response : url=https://gorest.co.in/public/v2/users?access-token=16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3 
  status=401, reason=Unauthorized 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:21 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'd4a71e9d-6960-49eb-ab20-4bec17b145c5', 'x-runtime': '0.008324', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=gN2uRiZArfMvKOIkrSE1Vc%2FGiFiy3aB7RRse5wtFSJM04uwJAsrW2LEaEdOWTn8kI1U9Hr26iB%2BZxFIAS%2BCIwDyi%2FRWD97pVtz2VCMRdjAsQnMbJgjzhLtQ6a8fOFes%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eac6be9399ed-CDG', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:14 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '85b27857-e07e-48c4-a3b5-2803490c841e', 'x-runtime': '0.017836', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=U7AC3CiuRbcdohbB1E5iwNYhqliYtUOC99bLLv1VRcd3E9ZsU3uePMH9OhQSNPA6bI5jL3DB%2Fm9%2FrXg5MGVOJcgq4WHilVecubVWYE9U82MYtqvp7NesMuYmQQsxQq4%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556ce53a8276e9-LHR', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={"message":"Invalid token"} 
  </msg>
-<msg timestamp="20230911 20:54:21.209" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:20.682" endtime="20230911 20:54:21.209"/>
+<msg timestamp="20230912 10:02:13.940" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:13.288" endtime="20230912 10:02:13.940"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" starttime="20230911 20:54:21.210" endtime="20230911 20:54:21.210"/>
+<status status="PASS" starttime="20230912 10:02:13.941" endtime="20230912 10:02:13.941"/>
 </return>
-<msg timestamp="20230911 20:54:21.210" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:20.682" endtime="20230911 20:54:21.210"/>
+<msg timestamp="20230912 10:02:13.941" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:13.287" endtime="20230912 10:02:13.941"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <var>${response_str}</var>
 <arg>${response.content}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20230911 20:54:21.211" level="INFO">${response_str} = {"message":"Invalid token"}</msg>
-<status status="PASS" starttime="20230911 20:54:21.210" endtime="20230911 20:54:21.211"/>
+<msg timestamp="20230912 10:02:13.942" level="INFO">${response_str} = {"message":"Invalid token"}</msg>
+<status status="PASS" starttime="20230912 10:02:13.941" endtime="20230912 10:02:13.942"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${response_str}</arg>
 <arg>{"message":"Invalid token"}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230911 20:54:21.211" endtime="20230911 20:54:21.211"/>
+<status status="PASS" starttime="20230912 10:02:13.942" endtime="20230912 10:02:13.943"/>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:21.212" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:21.212" endtime="20230911 20:54:21.212"/>
+<msg timestamp="20230912 10:02:13.943" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:13.943" endtime="20230912 10:02:13.943"/>
 </kw>
 <doc>Perform post with invalid Bearer token in the query parameter and validate the response</doc>
 <tag>NonFunctional</tag>
-<status status="PASS" starttime="20230911 20:54:20.676" endtime="20230911 20:54:21.212"/>
+<status status="PASS" starttime="20230912 10:02:13.282" endtime="20230912 10:02:13.944"/>
 </test>
 <test id="s1-t9" name="Verify Post with Authentication" line="116">
 <kw name="Session Creation" library="resource" type="SETUP">
@@ -1431,10 +1431,10 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:21.214" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:21.214" endtime="20230911 20:54:21.214"/>
+<msg timestamp="20230912 10:02:13.945" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:13.945" endtime="20230912 10:02:13.946"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:21.213" endtime="20230911 20:54:21.214"/>
+<status status="PASS" starttime="20230912 10:02:13.945" endtime="20230912 10:02:13.946"/>
 </kw>
 <kw name="Get Input" library="resource">
 <var>${validtoken}</var>
@@ -1444,23 +1444,23 @@
 <var>${json-data}</var>
 <arg>./InputData/input.json</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20230911 20:54:21.215" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input':...</msg>
-<status status="PASS" starttime="20230911 20:54:21.215" endtime="20230911 20:54:21.215"/>
+<msg timestamp="20230912 10:02:13.947" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input'...</msg>
+<status status="PASS" starttime="20230912 10:02:13.946" endtime="20230912 10:02:13.947"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${data}</var>
 <arg>${json-data}</arg>
 <arg>${input}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20230911 20:54:21.216" level="INFO">${data} = 7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02</msg>
-<status status="PASS" starttime="20230911 20:54:21.215" endtime="20230911 20:54:21.216"/>
+<msg timestamp="20230912 10:02:13.947" level="INFO">${data} = 7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f</msg>
+<status status="PASS" starttime="20230912 10:02:13.947" endtime="20230912 10:02:13.947"/>
 </kw>
 <return>
 <value>${data}</value>
-<status status="PASS" starttime="20230911 20:54:21.216" endtime="20230911 20:54:21.216"/>
+<status status="PASS" starttime="20230912 10:02:13.947" endtime="20230912 10:02:13.948"/>
 </return>
-<msg timestamp="20230911 20:54:21.216" level="INFO">${validtoken} = 7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02</msg>
-<status status="PASS" starttime="20230911 20:54:21.214" endtime="20230911 20:54:21.216"/>
+<msg timestamp="20230912 10:02:13.948" level="INFO">${validtoken} = 7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f</msg>
+<status status="PASS" starttime="20230912 10:02:13.946" endtime="20230912 10:02:13.948"/>
 </kw>
 <kw name="Get Input" library="resource">
 <var>${data}</var>
@@ -1470,23 +1470,23 @@
 <var>${json-data}</var>
 <arg>./InputData/input.json</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20230911 20:54:21.217" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input':...</msg>
-<status status="PASS" starttime="20230911 20:54:21.217" endtime="20230911 20:54:21.217"/>
+<msg timestamp="20230912 10:02:13.949" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input'...</msg>
+<status status="PASS" starttime="20230912 10:02:13.948" endtime="20230912 10:02:13.949"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${data}</var>
 <arg>${json-data}</arg>
 <arg>${input}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20230911 20:54:21.218" level="INFO">${data} = {'name': '3. Chinmayananda Kocchar', 'email': 'kocch_msgr_chinmaynanda@schowalter.test', 'gender': 'female', 'status': 'active'}</msg>
-<status status="PASS" starttime="20230911 20:54:21.217" endtime="20230911 20:54:21.218"/>
+<msg timestamp="20230912 10:02:13.949" level="INFO">${data} = {'name': '5. Chinmayananda Kocchar', 'email': 'koch_msgr_chinmaynanda@schowalter.test', 'gender': 'female', 'status': 'active'}</msg>
+<status status="PASS" starttime="20230912 10:02:13.949" endtime="20230912 10:02:13.949"/>
 </kw>
 <return>
 <value>${data}</value>
-<status status="PASS" starttime="20230911 20:54:21.218" endtime="20230911 20:54:21.218"/>
+<status status="PASS" starttime="20230912 10:02:13.949" endtime="20230912 10:02:13.949"/>
 </return>
-<msg timestamp="20230911 20:54:21.218" level="INFO">${data} = {'name': '3. Chinmayananda Kocchar', 'email': 'kocch_msgr_chinmaynanda@schowalter.test', 'gender': 'female', 'status': 'active'}</msg>
-<status status="PASS" starttime="20230911 20:54:21.216" endtime="20230911 20:54:21.218"/>
+<msg timestamp="20230912 10:02:13.949" level="INFO">${data} = {'name': '5. Chinmayananda Kocchar', 'email': 'koch_msgr_chinmaynanda@schowalter.test', 'gender': 'female', 'status': 'active'}</msg>
+<status status="PASS" starttime="20230912 10:02:13.948" endtime="20230912 10:02:13.949"/>
 </kw>
 <kw name="Post Request" library="resource">
 <var>${response}</var>
@@ -1502,35 +1502,36 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:21.861" level="INFO">POST Request : url=https://gorest.co.in/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02 
- path_url=/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '105', 'Content-Type': 'application/x-www-form-urlencoded'} 
- body=name=3.+Chinmayananda+Kocchar&amp;email=kocch_msgr_chinmaynanda%40schowalter.test&amp;gender=female&amp;status=active 
+<msg timestamp="20230912 10:02:14.305" level="INFO">POST Request : url=https://gorest.co.in/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f 
+ path_url=/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '104', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=name=5.+Chinmayananda+Kocchar&amp;email=koch_msgr_chinmaynanda%40schowalter.test&amp;gender=female&amp;status=active 
  </msg>
-<msg timestamp="20230911 20:54:21.861" level="INFO">POST Response : url=https://gorest.co.in/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02 
- status=401, reason=Unauthorized 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:21 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '11ba269e-e983-4d98-b436-dacf379d72c5', 'x-runtime': '0.009806', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=2MHZZpbepjRzpiYe34usFoCp%2FC8XWpy6%2B%2BjiaHWTHhhmcPFxFkTa5KPkfvdhznGyz4gIhC4DnEZ1%2Bn69iNhsE%2BY%2F0YZrPv%2BnU9iDzK%2FhG6JF6i11OpiiAeI%2F2bZU3fU%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eac9e99223ef-LHR', 'alt-svc': 'h3=":443"; ma=86400'} 
- body={"message":"Invalid token"} 
+<msg timestamp="20230912 10:02:14.306" level="INFO">POST Response : url=https://gorest.co.in/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f 
+ status=201, reason=Created 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:14 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"3601e2bc3fdbeaf9e6a5dfac6d36c1d2"', 'location': 'https://gorest.co.in/public/v2/users/5145278', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-ratelimit-limit': '90', 'x-ratelimit-remaining': '88', 'x-ratelimit-reset': '1', 'x-request-id': 'f8957d4b-b6f2-4971-a0eb-1f39260f402a', 'x-runtime': '0.085042', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Xcoe19jDNjcI51ZZYyxCgf%2FAQ04ikiOl1AFxUBwcHaoeBqNwVxtf9psAzw65GOdWoVLZgEj1MLICRCIZVCVFufo1reYq7B3zd%2BI4Iv65Fy1P4cnpsOO5rsv6pzbud14%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556ce94eaf48bd-LHR', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"id":5145278,"name":"5. Chinmayananda Kocchar","email":"koch_msgr_chinmaynanda@schowalter.test","gender":"female","status":"active"} 
  </msg>
-<msg timestamp="20230911 20:54:21.861" level="FAIL">Url: https://gorest.co.in/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02 Expected status: 401 != 201</msg>
-<status status="FAIL" starttime="20230911 20:54:21.219" endtime="20230911 20:54:21.899"/>
+<msg timestamp="20230912 10:02:14.306" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:13.950" endtime="20230912 10:02:14.306"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="NOT RUN" starttime="20230911 20:54:21.899" endtime="20230911 20:54:21.900"/>
+<status status="PASS" starttime="20230912 10:02:14.306" endtime="20230912 10:02:14.306"/>
 </return>
-<status status="FAIL" starttime="20230911 20:54:21.218" endtime="20230911 20:54:21.900"/>
+<msg timestamp="20230912 10:02:14.306" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:13.950" endtime="20230912 10:02:14.306"/>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:21.901" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:21.900" endtime="20230911 20:54:21.901"/>
+<msg timestamp="20230912 10:02:14.307" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:14.307" endtime="20230912 10:02:14.307"/>
 </kw>
 <doc>Perform Post with valid token in the query parameter and validate the response</doc>
 <tag>NonFunctional</tag>
-<status status="FAIL" starttime="20230911 20:54:21.213" endtime="20230911 20:54:21.901">Url: https://gorest.co.in/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02 Expected status: 401 != 201</status>
+<status status="PASS" starttime="20230912 10:02:13.944" endtime="20230912 10:02:14.307"/>
 </test>
-<test id="s1-t10" name="Verify Non-SSL Rest endpoint behaviour" line="123">
+<test id="s1-t10" name="Verify HTTP status code-422" line="123">
 <kw name="Session Creation" library="resource" type="SETUP">
 <doc>Creates Session</doc>
 <kw name="Create Session" library="RequestsLibrary">
@@ -1538,18 +1539,126 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:21.904" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:21.904" endtime="20230911 20:54:21.904"/>
+<msg timestamp="20230912 10:02:14.309" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:14.309" endtime="20230912 10:02:14.310"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:21.904" endtime="20230911 20:54:21.904"/>
+<status status="PASS" starttime="20230912 10:02:14.309" endtime="20230912 10:02:14.310"/>
+</kw>
+<kw name="Get Input" library="resource">
+<var>${validtoken}</var>
+<arg>validToken</arg>
+<doc>Get the token from input.json file and return the token</doc>
+<kw name="Load Json From File" library="JSONLibrary">
+<var>${json-data}</var>
+<arg>./InputData/input.json</arg>
+<doc>Load JSON from file.</doc>
+<msg timestamp="20230912 10:02:14.311" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input'...</msg>
+<status status="PASS" starttime="20230912 10:02:14.310" endtime="20230912 10:02:14.311"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${data}</var>
+<arg>${json-data}</arg>
+<arg>${input}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230912 10:02:14.311" level="INFO">${data} = 7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f</msg>
+<status status="PASS" starttime="20230912 10:02:14.311" endtime="20230912 10:02:14.312"/>
+</kw>
+<return>
+<value>${data}</value>
+<status status="PASS" starttime="20230912 10:02:14.312" endtime="20230912 10:02:14.312"/>
+</return>
+<msg timestamp="20230912 10:02:14.312" level="INFO">${validtoken} = 7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f</msg>
+<status status="PASS" starttime="20230912 10:02:14.310" endtime="20230912 10:02:14.312"/>
+</kw>
+<kw name="Get Input" library="resource">
+<var>${data}</var>
+<arg>Post_input</arg>
+<doc>Get the token from input.json file and return the token</doc>
+<kw name="Load Json From File" library="JSONLibrary">
+<var>${json-data}</var>
+<arg>./InputData/input.json</arg>
+<doc>Load JSON from file.</doc>
+<msg timestamp="20230912 10:02:14.313" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input'...</msg>
+<status status="PASS" starttime="20230912 10:02:14.312" endtime="20230912 10:02:14.313"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${data}</var>
+<arg>${json-data}</arg>
+<arg>${input}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230912 10:02:14.313" level="INFO">${data} = {'name': '5. Chinmayananda Kocchar', 'email': 'koch_msgr_chinmaynanda@schowalter.test', 'gender': 'female', 'status': 'active'}</msg>
+<status status="PASS" starttime="20230912 10:02:14.313" endtime="20230912 10:02:14.313"/>
+</kw>
+<return>
+<value>${data}</value>
+<status status="PASS" starttime="20230912 10:02:14.313" endtime="20230912 10:02:14.313"/>
+</return>
+<msg timestamp="20230912 10:02:14.313" level="INFO">${data} = {'name': '5. Chinmayananda Kocchar', 'email': 'koch_msgr_chinmaynanda@schowalter.test', 'gender': 'female', 'status': 'active'}</msg>
+<status status="PASS" starttime="20230912 10:02:14.312" endtime="20230912 10:02:14.313"/>
+</kw>
+<kw name="Post Request" library="resource">
+<var>${response}</var>
+<arg>${users_endpoint}?access-token=${validtoken}</arg>
+<arg>${data}</arg>
+<arg>${unprocessed_statuscode}</arg>
+<doc>Perform Post request and verify the status</doc>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>${url}</arg>
+<arg>${data}</arg>
+<arg>${headers}</arg>
+<arg>expected_status=${expected_status_code}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20230912 10:02:14.627" level="INFO">POST Request : url=https://gorest.co.in/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f 
+ path_url=/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '104', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=name=5.+Chinmayananda+Kocchar&amp;email=koch_msgr_chinmaynanda%40schowalter.test&amp;gender=female&amp;status=active 
+ </msg>
+<msg timestamp="20230912 10:02:14.627" level="INFO">POST Response : url=https://gorest.co.in/public/v2/users?access-token=7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f 
+ status=422, reason=Unprocessable Entity 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:14 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-ratelimit-limit': '90', 'x-ratelimit-remaining': '89', 'x-ratelimit-reset': '2', 'x-request-id': '736c7882-6b4c-4414-89b9-cf40405c7e4e', 'x-runtime': '0.035914', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ChRt0nn3bBY7EZz7mujZiTDg63v8CgNmQLZEUzX%2FN65lGP2w%2FWrwh5vjAVW%2FKXLLiSv3GZrms%2FU7libf16pScBB0kxFoeTb9w5A1KoWZX2ndjJwEs96UX1WiUAuGk%2FY%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556ceb9db823d4-LHR', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"field":"email","message":"has already been taken"}] 
+ </msg>
+<msg timestamp="20230912 10:02:14.629" level="INFO">${response} = &lt;Response [422]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:14.314" endtime="20230912 10:02:14.629"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" starttime="20230912 10:02:14.629" endtime="20230912 10:02:14.629"/>
+</return>
+<msg timestamp="20230912 10:02:14.629" level="INFO">${response} = &lt;Response [422]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:14.314" endtime="20230912 10:02:14.629"/>
+</kw>
+<kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
+<doc>Removes all the session objects</doc>
+<msg timestamp="20230912 10:02:14.630" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:14.630" endtime="20230912 10:02:14.630"/>
+</kw>
+<doc>Perform Post with duplicate entry valid token in the query parameter and validate the response</doc>
+<tag>NonFunctional</tag>
+<status status="PASS" starttime="20230912 10:02:14.308" endtime="20230912 10:02:14.630"/>
+</test>
+<test id="s1-t11" name="Verify Non-SSL Rest endpoint behaviour" line="130">
+<kw name="Session Creation" library="resource" type="SETUP">
+<doc>Creates Session</doc>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>mysession</arg>
+<arg>${baseurl}</arg>
+<arg>verify=true</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230912 10:02:14.632" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:14.632" endtime="20230912 10:02:14.632"/>
+</kw>
+<status status="PASS" starttime="20230912 10:02:14.632" endtime="20230912 10:02:14.632"/>
 </kw>
 <kw name="Create Session" library="RequestsLibrary">
 <arg>newsession</arg>
 <arg>${baseurl}</arg>
 <arg>verify=false</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:21.905" level="INFO">Creating Session using : alias=newsession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:21.905" endtime="20230911 20:54:21.905"/>
+<msg timestamp="20230912 10:02:14.633" level="INFO">Creating Session using : alias=newsession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:14.633" endtime="20230912 10:02:14.633"/>
 </kw>
 <kw name="Get Request" library="resource">
 <var>${response}</var>
@@ -1564,36 +1673,36 @@
 <arg>${headers}</arg>
 <arg>expected_status=${expected_status_code}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20230911 20:54:22.572" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:15.281" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  path_url=/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20230911 20:54:22.572" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
+<msg timestamp="20230912 10:02:15.281" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?Create%20Dictionary%20Content-Type=application/json 
  status=200, reason=OK 
- headers={'Date': 'Mon, 11 Sep 2023 15:24:22 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"849234b1e0c8002aa8b875468353c910"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '280', 'x-pagination-total': '2798', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'eb6ee668-5402-4969-9e01-2f8f9c6e1400', 'x-runtime': '0.022773', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=dYlqFIsiZaUsyjM4uw3tqouNbr0kWHicZafRhs5IHI5fBrHj2rlUVelu%2Fg1Srh13mxsKzt%2FEnC%2BbfcvvYmmeXpY0ijjnOitwAW%2FPzV9jgKj2vnOmv4k71%2BBAw8wnv7k%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8050eace491023d7-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
- body=[{"id":5104299,"name":"Manjusha Namboothiri","email":"namboothiri_manjusha@kulas.test","gender":"male","status":"inactive"},{"id":5104295,"name":"Harita Mahajan","email":"mahajan_harita@emmerich.test","gender":"female","status":"inactive"},{"id":5104293,"name":"Bheeshma Pilla","email":"bheeshma_pilla@schinner-ernser.example","gender":"female","status":"inactive"},{"id":5104292,"name":"Omana Embranthiri","email":"omana_embranthiri@hane-gorczany.example","gender":"male","status":"inactive"},{"id":5104291,"name":"Rev. Kamlesh Acharya","email":"kamlesh_rev_acharya@powlowski.test","gender":"female","status":"active"},{"id":5104290,"name":"Dhara Gandhi","email":"gandhi_dhara@boyer.example","gender":"female","status":"active"},{"id":5104289,"name":"Deeptiman Iyer CPA","email":"deeptiman_iyer_cpa@kemmer.test","gender":"female","status":"inactive"},{"id":5104288,"name":"Saroja Khanna","email":"saroja_khanna@lind-robel.example","gender":"male","status":"active"},{"id":5104287,"name":"Bishnu Mehrotra","email":"bishnu_mehrotra@feeney-will.example","gender":"female","status":"active"},{"id":5104286,"name":"Sen. Meena Kakkar","email":"meena_kakkar_sen@simonis-mraz.example","gender":"female","status":"inactive"}] 
+ headers={'Date': 'Tue, 12 Sep 2023 04:32:15 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"03098440efc592921b4abb6c35667f0c"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '299', 'x-pagination-total': '2983', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '6c0d5c45-1793-483b-96e5-bf4e51d39c1b', 'x-runtime': '0.040026', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2Bkw4rJhd7nFrZRhK2QzvysEGdvhWXgH%2Fy%2FlMLJhGqO7ecOSv%2FOyXmJWc8VuK24%2FgEC%2BqpjG6lFLCU1mi43J5bFJXtEgzIfEcvf8V1%2FJWNFJvCiLHOlvAEtGT%2FPf9J1Y%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '80556ced992ddc29-LHR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":5143813,"name":"Jagmeet Jha","email":"jagmeet_jha@jast-boehm.test","gender":"female","status":"inactive"},{"id":5143812,"name":"Chandini Guneta","email":"chandini_guneta@schumm.test","gender":"female","status":"active"},{"id":5143811,"name":"Bhoj Naik","email":"bhoj_naik@wuckert.example","gender":"male","status":"inactive"},{"id":5143810,"name":"Ms. Gorakhanatha Kocchar","email":"ms_gorakhanatha_kocchar@volkman-hammes.example","gender":"male","status":"active"},{"id":5143809,"name":"Aatreya Pilla","email":"aatreya_pilla@bogisich.example","gender":"male","status":"inactive"},{"id":5143808,"name":"Saraswati Kaur","email":"saraswati_kaur@welch.test","gender":"male","status":"active"},{"id":5143807,"name":"Kalyani Acharya","email":"acharya_kalyani@stehr.test","gender":"female","status":"inactive"},{"id":5143806,"name":"Dayaananda Ganaka","email":"dayaananda_ganaka@deckow.example","gender":"male","status":"inactive"},{"id":5143804,"name":"Minakshi Dwivedi","email":"minakshi_dwivedi@damore.test","gender":"female","status":"inactive"},{"id":5143803,"name":"Chetanaanand Saini","email":"saini_chetanaanand@macejkovic.example","gender":"female","status":"active"}] 
  </msg>
-<msg timestamp="20230911 20:54:22.575" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:21.906" endtime="20230911 20:54:22.575"/>
+<msg timestamp="20230912 10:02:15.281" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:14.634" endtime="20230912 10:02:15.281"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" starttime="20230911 20:54:22.575" endtime="20230911 20:54:22.575"/>
+<status status="PASS" starttime="20230912 10:02:15.281" endtime="20230912 10:02:15.281"/>
 </return>
-<msg timestamp="20230911 20:54:22.575" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230911 20:54:21.905" endtime="20230911 20:54:22.575"/>
+<msg timestamp="20230912 10:02:15.282" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230912 10:02:14.633" endtime="20230912 10:02:15.282"/>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:22.575" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:22.575" endtime="20230911 20:54:22.575"/>
+<msg timestamp="20230912 10:02:15.282" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:15.282" endtime="20230912 10:02:15.282"/>
 </kw>
 <doc>Verify Non-SSL Rest endpoint behaviour and ensure response is success</doc>
 <tag>NonFunctional</tag>
-<status status="PASS" starttime="20230911 20:54:21.902" endtime="20230911 20:54:22.576"/>
+<status status="PASS" starttime="20230912 10:02:14.631" endtime="20230912 10:02:15.283"/>
 </test>
-<test id="s1-t11" name="Logging test results to mongodb" line="130">
+<test id="s1-t12" name="Logging test results to mongodb" line="137">
 <kw name="Session Creation" library="resource" type="SETUP">
 <doc>Creates Session</doc>
 <kw name="Create Session" library="RequestsLibrary">
@@ -1601,10 +1710,10 @@
 <arg>${baseurl}</arg>
 <arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230911 20:54:22.578" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" starttime="20230911 20:54:22.577" endtime="20230911 20:54:22.578"/>
+<msg timestamp="20230912 10:02:15.285" level="INFO">Creating Session using : alias=mysession, url=https://gorest.co.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230912 10:02:15.284" endtime="20230912 10:02:15.285"/>
 </kw>
-<status status="PASS" starttime="20230911 20:54:22.577" endtime="20230911 20:54:22.578"/>
+<status status="PASS" starttime="20230912 10:02:15.284" endtime="20230912 10:02:15.285"/>
 </kw>
 <kw name="Get Input" library="resource">
 <var>${mongo}</var>
@@ -1614,73 +1723,97 @@
 <var>${json-data}</var>
 <arg>./InputData/input.json</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20230911 20:54:22.579" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input':...</msg>
-<status status="PASS" starttime="20230911 20:54:22.578" endtime="20230911 20:54:22.579"/>
+<msg timestamp="20230912 10:02:15.286" level="INFO">${json-data} = {'validToken': '7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f', 'invalidToken': '16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3', 'invalid_id': '0000', 'Post_input'...</msg>
+<status status="PASS" starttime="20230912 10:02:15.286" endtime="20230912 10:02:15.286"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${data}</var>
 <arg>${json-data}</arg>
 <arg>${input}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20230911 20:54:22.579" level="INFO">${data} = {'dbHost': 'testhost', 'dbPort': 'port_number', 'dbusername': 'meenajalandhar', 'dbpassword': 'Vaishu*123'}</msg>
-<status status="PASS" starttime="20230911 20:54:22.579" endtime="20230911 20:54:22.579"/>
+<msg timestamp="20230912 10:02:15.287" level="INFO">${data} = {'dbname': 'Testdb', 'collectionname': 'TestStatus', 'dbusername': 'meenajalandhar', 'dbpassword': 'Vaishu*123'}</msg>
+<status status="PASS" starttime="20230912 10:02:15.286" endtime="20230912 10:02:15.287"/>
 </kw>
 <return>
 <value>${data}</value>
-<status status="PASS" starttime="20230911 20:54:22.580" endtime="20230911 20:54:22.580"/>
+<status status="PASS" starttime="20230912 10:02:15.287" endtime="20230912 10:02:15.287"/>
 </return>
-<msg timestamp="20230911 20:54:22.580" level="INFO">${mongo} = {'dbHost': 'testhost', 'dbPort': 'port_number', 'dbusername': 'meenajalandhar', 'dbpassword': 'Vaishu*123'}</msg>
-<status status="PASS" starttime="20230911 20:54:22.578" endtime="20230911 20:54:22.580"/>
+<msg timestamp="20230912 10:02:15.287" level="INFO">${mongo} = {'dbname': 'Testdb', 'collectionname': 'TestStatus', 'dbusername': 'meenajalandhar', 'dbpassword': 'Vaishu*123'}</msg>
+<status status="PASS" starttime="20230912 10:02:15.285" endtime="20230912 10:02:15.287"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${username}</var>
 <arg>${mongo["dbusername"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230911 20:54:22.581" level="INFO">${username} = meenajalandhar</msg>
-<status status="PASS" starttime="20230911 20:54:22.580" endtime="20230911 20:54:22.581"/>
+<msg timestamp="20230912 10:02:15.288" level="INFO">${username} = meenajalandhar</msg>
+<status status="PASS" starttime="20230912 10:02:15.287" endtime="20230912 10:02:15.288"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${password}</var>
 <arg>${mongo["dbpassword"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230911 20:54:22.582" level="INFO">${password} = Vaishu*123</msg>
-<status status="PASS" starttime="20230911 20:54:22.582" endtime="20230911 20:54:22.582"/>
+<msg timestamp="20230912 10:02:15.289" level="INFO">${password} = Vaishu*123</msg>
+<status status="PASS" starttime="20230912 10:02:15.288" endtime="20230912 10:02:15.289"/>
 </kw>
-<kw name="$db_results=">
-<arg>logresults_mongodb</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${dbname}</var>
+<arg>${mongo["dbname"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230912 10:02:15.289" level="INFO">${dbname} = Testdb</msg>
+<status status="PASS" starttime="20230912 10:02:15.289" endtime="20230912 10:02:15.290"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${collectionname}</var>
+<arg>${mongo["collectionname"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230912 10:02:15.290" level="INFO">${collectionname} = TestStatus</msg>
+<status status="PASS" starttime="20230912 10:02:15.290" endtime="20230912 10:02:15.290"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${filename}</var>
+<arg>output.xml</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230912 10:02:15.291" level="INFO">${filename} = output.xml</msg>
+<status status="PASS" starttime="20230912 10:02:15.291" endtime="20230912 10:02:15.291"/>
+</kw>
+<kw name="Logresults Mongodb" library="lib">
+<var>${db_results}</var>
 <arg>${username}</arg>
 <arg>${password}</arg>
-<msg timestamp="20230911 20:54:22.585" level="FAIL">No keyword with name '$db_results=' found.</msg>
-<status status="FAIL" starttime="20230911 20:54:22.585" endtime="20230911 20:54:22.586"/>
+<arg>${dbname}</arg>
+<arg>${collectionname}</arg>
+<arg>${filename}</arg>
+<msg timestamp="20230912 10:02:45.662" level="FAIL">ServerSelectionTimeoutError: SSL handshake failed: ac-qkwwnzk-shard-00-01.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129),SSL handshake failed: ac-qkwwnzk-shard-00-02.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129),SSL handshake failed: ac-qkwwnzk-shard-00-00.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129), Timeout: 30s, Topology Description: &lt;TopologyDescription id: 64ffe9cf0214722b2373d14b, topology_type: ReplicaSetNoPrimary, servers: [&lt;ServerDescription ('ac-qkwwnzk-shard-00-00.qucbuxl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-qkwwnzk-shard-00-00.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129)')&gt;, &lt;ServerDescription ('ac-qkwwnzk-shard-00-01.qucbuxl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-qkwwnzk-shard-00-01.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129)')&gt;, &lt;ServerDescription ('ac-qkwwnzk-shard-00-02.qucbuxl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-qkwwnzk-shard-00-02.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129)')&gt;]&gt;</msg>
+<status status="FAIL" starttime="20230912 10:02:15.291" endtime="20230912 10:02:45.664"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>$db_results</arg>
+<arg>${db_results}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20230911 20:54:22.586" endtime="20230911 20:54:22.586"/>
+<status status="NOT RUN" starttime="20230912 10:02:45.665" endtime="20230912 10:02:45.665"/>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20230911 20:54:22.587" level="INFO">Deleting All Sessions</msg>
-<status status="PASS" starttime="20230911 20:54:22.586" endtime="20230911 20:54:22.587"/>
+<msg timestamp="20230912 10:02:45.665" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20230912 10:02:45.665" endtime="20230912 10:02:45.666"/>
 </kw>
-<status status="FAIL" starttime="20230911 20:54:22.577" endtime="20230911 20:54:22.587">No keyword with name '$db_results=' found.</status>
+<doc>Connect to mongodb and update the test status from output.xml file to db</doc>
+<status status="FAIL" starttime="20230912 10:02:15.284" endtime="20230912 10:02:45.666">ServerSelectionTimeoutError: SSL handshake failed: ac-qkwwnzk-shard-00-01.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129),SSL handshake failed: ac-qkwwnzk-shard-00-02.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129),SSL handshake failed: ac-qkwwnzk-shard-00-00.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129), Timeout: 30s, Topology Description: &lt;TopologyDescription id: 64ffe9cf0214722b2373d14b, topology_type: ReplicaSetNoPrimary, servers: [&lt;ServerDescription ('ac-qkwwnzk-shard-00-00.qucbuxl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-qkwwnzk-shard-00-00.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129)')&gt;, &lt;ServerDescription ('ac-qkwwnzk-shard-00-01.qucbuxl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-qkwwnzk-shard-00-01.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129)')&gt;, &lt;ServerDescription ('ac-qkwwnzk-shard-00-02.qucbuxl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: ac-qkwwnzk-shard-00-02.qucbuxl.mongodb.net:27017: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129)')&gt;]&gt;</status>
 </test>
 <doc>Suite includes the test cases for Functional and Non Functional requirement of gorest api</doc>
-<status status="FAIL" starttime="20230911 20:54:15.826" endtime="20230911 20:54:22.588"/>
+<status status="FAIL" starttime="20230912 10:02:09.155" endtime="20230912 10:02:45.667"/>
 </suite>
 <statistics>
 <total>
-<stat pass="9" fail="2" skip="0">All Tests</stat>
+<stat pass="11" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="4" fail="0" skip="0">Functional</stat>
-<stat pass="5" fail="1" skip="0">NonFunctional</stat>
+<stat pass="7" fail="0" skip="0">NonFunctional</stat>
 </tag>
 <suite>
-<stat pass="9" fail="2" skip="0" id="s1" name="Testcases">Testcases</stat>
+<stat pass="11" fail="1" skip="0" id="s1" name="Testcases">Testcases</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230911 20:54:16.945" level="ERROR">Error in file 'C:\Users\msm618\PycharmProjects\ActivityTest\RobotActivity\Testcases.robot' on line 11: Invalid resource file extension '.xml'. Supported extensions are '.json', '.resource', '.rest', '.robot', '.rsrc', '.rst', '.tsv' and '.txt'.</msg>
 </errors>
 </robot>

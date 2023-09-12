@@ -8,7 +8,6 @@ Library     ./PythonLibrary/lib.py
 Resource        ./ResourceFile/resource.robot
 Test Setup     Session Creation
 Test Teardown      Delete All Sessions
-Resource        output.xml
 
 *** Variables ***
 ${baseurl}=     https://gorest.co.in/
@@ -18,6 +17,7 @@ ${success_statuscode}=  200
 ${Post_successstatus}=  201
 ${notfound_statuscode}=     404
 ${authenticationerror_statuscode}=      401
+${unprocessed_statuscode}=      422
 
 *** Test Cases ***
 
@@ -120,6 +120,13 @@ Verify Post with Authentication
         ${data}=        Get Input       Post_input
         ${response}=        POST Request        ${users_endpoint}?access-token=${validtoken}       ${data}       ${Post_successstatus}
 
+Verify HTTP status code-422
+        [Documentation]     Perform Post with duplicate entry valid token in the query parameter and validate the response
+        [Tags]      NonFunctional
+        ${validtoken}=      Get Input       validToken
+        ${data}=        Get Input       Post_input
+        ${response}=        POST Request        ${users_endpoint}?access-token=${validtoken}       ${data}       ${unprocessed_statuscode}
+
 Verify Non-SSL Rest endpoint behaviour
         [Documentation]     Verify Non-SSL Rest endpoint behaviour and ensure response is success
         [Tags]      NonFunctional
@@ -128,10 +135,15 @@ Verify Non-SSL Rest endpoint behaviour
 
 
 Logging test results to mongodb
+        [Documentation]     Connect to mongodb and update the test status from output.xml file to db
+        [Tags]      NonFunctional
         ${mongo}=        Get Input       MongoDb
         ${username}=        set variable        ${mongo["dbusername"]}
         ${password}=        set variable        ${mongo["dbpassword"]}
-        ${db_results}=        logresults_mongodb      ${username}     ${password}
+        ${dbname}=        set variable        ${mongo["dbname"]}
+        ${collectionname}=        set variable        ${mongo["collectionname"]}
+        ${filename}=        set variable        output.xml
+        ${db_results}=        logresults_mongodb      ${username}     ${password}       ${dbname}       ${collectionname}       ${filename}
         log to console      ${db_results}
 
 

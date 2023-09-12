@@ -1,18 +1,18 @@
 {
-  "validToken":  "7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02",
+  "validToken":  "7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f",
   "invalidToken":  "16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3",
   "invalid_id":   "0000",
   "Post_input":
               {
-                "name": "3. Chinmayananda Kocchar",
-                "email": "kocch_msgr_chinmaynanda@schowalter.test",
+                "name": "5. Chinmayananda Kocchar",
+                "email": "koch_msgr_chinmaynanda@schowalter.test",
                 "gender": "female",
                 "status": "active"
               },
   "MongoDb":
               {
-              "dbHost": "testhost",
-              "dbPort": "port_number",
+              "dbname": "Testdb",
+              "collectionname": "TestStatus",
               "dbusername":  "meenajalandhar",
               "dbpassword":  "Vaishu*123"
 
