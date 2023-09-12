@@ -43,7 +43,7 @@ Verify Response has Valid Json Data
         Should be Equal     ${type}     dict
 
 Verify Response Data has email
-        [Documentation]     Validate API response has 'email' attribute
+        [Documentation]     Validate API response has 'email' attribute and validate the email format
         [Tags]      Functional
         ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}       ${headers}
         #Verify email attribute available in response json
@@ -54,9 +54,11 @@ Verify Response Data has email
 
 
 Verify entries have similar attributes
-        [Documentation]     Validate all the entries in the API response has similar attributes
+        [Documentation]     Validate all the entries in the API response have similar attributes
         [Tags]      Functional
-        ${response}=    Get Request         ${users_endpoint}        ${success_statuscode}       ${headers}
+        #${response}=    Get Request         ${users_endpoint}        ${success_statuscode}       ${headers}
+        ${response}=    Get Request         ${users_endpoint}        400       ${headers}
+
         #Getting the response json
         ${data}=        Set Variable        ${response.json()}
         # Getting the length of the response json to verify against each entries of a list
@@ -103,7 +105,7 @@ Verify Post without Authentication
         Should be equal      ${response_str}     {"message":"Authentication failed"}
 
 
-Verify Post with invalid token
+Verify HTTP response code when performing Post with invalid token
         [Documentation]     Perform post with invalid Bearer token in the query parameter and validate the response
         [Tags]      NonFunctional
         ${invalidtoken}=      Get Input       invalidToken
@@ -120,7 +122,7 @@ Verify Post with Authentication
         ${data}=        Get Input       Post_input
         ${response}=        POST Request        ${users_endpoint}?access-token=${validtoken}       ${data}       ${Post_successstatus}
 
-Verify HTTP status code-422
+Verify HTTP response code when performing Post with duplicate record
         [Documentation]     Perform Post with duplicate entry valid token in the query parameter and validate the response
         [Tags]      NonFunctional
         ${validtoken}=      Get Input       validToken

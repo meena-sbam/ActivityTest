@@ -15,12 +15,11 @@ Session Creation
         Create Session  mysession      ${baseurl}       verify=true
 
 Get Input
-        [Documentation]     Get the token from input.json file and return the token
+        [Documentation]     Read the input json file and get the data
         [Arguments]     ${input}
         ${json-data}=      Load JSON From File        ./InputData/input.json
         ${data}=         Get From Dictionary       ${json-data}       ${input}
         RETURN      ${data}
-
 
 Get Request
         [Documentation]     Perform Get request and verify the status
@@ -33,11 +32,3 @@ Post Request
         [Arguments]     ${url}     ${data}       ${expected_status_code}     ${headers}=${header_content}
         ${response}=    POST On Session      mysession       ${url}       ${data}       ${headers}     expected_status=${expected_status_code}
         RETURN      ${response}
-
-
-
-
-
-
-
-
