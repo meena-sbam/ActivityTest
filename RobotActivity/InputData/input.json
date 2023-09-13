@@ -1,5 +1,5 @@
 {
-  "validToken":  "7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02f",
+  "validToken":  "7a170016b7ee10b2e6161554a07ade2ebbc9d37b28a62a320a400e2878fac02",
   "invalidToken":  "16bf06196d5bd77507cfb594ab0703857b3855875ce69588a8e9a6a547d8ec3",
   "invalid_id":   "0000",
   "Post_input":
@@ -13,8 +13,8 @@
               {
               "dbname": "Testdb",
               "collectionname": "TestStatus",
-              "dbusername":  "meenajalandhar",
-              "dbpassword":  "Vaishu*123"
+              "dbusername":  "dbuname",
+              "dbpassword":  "123"
 
               }
 
